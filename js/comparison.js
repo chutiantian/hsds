@@ -59,7 +59,7 @@
         return listArr;
     };
     //页面初始化
-    getdata("/js/json/compare.json", queryData, 'get', function (data) {
+    getdata("../js/json/compare.json", queryData, 'get', function (data) {
         data.isComeFrom = isComeFrom;
         renderData = data;
         render(data, '#compare-tpl', '.comparison-con');
@@ -121,7 +121,7 @@
             cartNum: (cartNum - 0) || 3,
             dataList: getList()
         };
-        getdata("/js/json/join-cart.json", {}, 'get', function (data) {
+        getdata("../js/json/join-cart.json", {}, 'get', function (data) {
             if (data.code != '1') {
                 layer.msg(data.msg)
                 return;
