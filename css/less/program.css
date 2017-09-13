@@ -1,0 +1,637 @@
+body {
+    background: #fcfcfc;
+}
+
+/*查询条件输入*/
+.program-con {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0 60px;
+    color: #666;
+    font-family: "Microsoft YaHei", SimSun, verdana, Sans-Serif;
+    font-size: 12px;
+}
+
+.purchasing-query {
+    width: 1140px;
+    padding: 25px 30px;
+    height: 70px;
+    background: #fff;
+    border: 1px solid #d6d6d6;
+    margin-bottom: 20px;
+}
+
+.purchasing-query label {
+    display: inline-block;
+    height: 26px;
+    line-height: 25px;
+}
+
+.purchasing-query div {
+    float: left;
+}
+
+.purchasing-query input {
+    margin-right: 60px;
+    border: none;
+    outline: none;
+    border: 1px solid #D6D6D6;
+    line-height: 24px;
+}
+
+.purchasing-query input {
+    width: 248px;
+    height: 24px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.purchasing-query .menu {
+    vertical-align: middle;
+    position: relative;
+}
+
+.purchasing-query #purchaseState {
+    position: relative;
+    width: 248px;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #d6d6d6;
+    margin-right: 60px;
+    margin-left: 4px;
+    padding-left: 10px;
+}
+
+#purchaseState i {
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #d6d6d6;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.menu ul {
+    position: absolute;
+    top: 25px;
+    right: 60px;
+    width: 258px;
+    border: 1px solid #d6d6d6;
+    text-align: center;
+    z-index: 100;
+    background: #fff;
+    display: none;
+    cursor: pointer;
+}
+
+.menu ul li {
+    font-size: 14px;
+    color: #000;
+    height: 26px;
+    line-height: 26px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.menu ul li:hover {
+    background: #d6d6d6;
+}
+
+#bdgagencyName {
+    margin-right: 0;
+}
+
+.purchasing-query button {
+    width: 60px;
+    height: 26px;
+    line-height: 24px;
+    outline: none;
+    cursor: pointer;
+}
+
+.purchasing-query .confirm {
+    background: #008EF5;
+    color: #fff;
+    border: 1px solid #008EF5;
+    margin-right: 27px;
+}
+
+.purchasing-query .reset {
+    background: #f3f3f3;
+    color: #666;
+    border: 1px solid #ddd;
+}
+
+/*采购计划内容*/
+.purchasing-con {
+    padding: 20px 20px 30px;
+    background: #fff;
+    border: 1px solid #D6D6D6;
+    margin-bottom: 30px;
+}
+
+.purchasing-con li {
+    width: 1155px;
+    margin: 0 auto;
+    border: 1px solid #d6d6d6;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.purchase-tit {
+    position: relative;
+    height: 79px;
+    background: #f6f6f6;
+    padding-left: 21px;
+    overflow: hidden;
+}
+
+.purchase-tit h2 {
+    position: relative;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #404040;
+    padding-left: 50px;
+    margin-bottom: 10px;
+}
+
+.purchase-tit h2 em {
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.purchase-tit .year {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 12px;
+    color: #F88000;
+    width: 42px;
+    height: 23px;
+    line-height: 20px;
+    background-image: url("../../img/purchasing-year.png");
+    background-repeat: no-repeat;
+}
+
+.purchase-tit .program-price {
+    margin-right: 260px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.purchase-tit .program-price b {
+    font-size: 18px;
+}
+
+.purchase-tit p span {
+    margin-right: 40px;
+}
+
+.purchase-detail {
+    height: 90px;
+    width: 715px;
+    border-right: 1px solid #D6D6D6;
+    overflow: hidden;
+}
+
+.purchase-detail p {
+    height: 45px;
+    line-height: 45px;
+    padding-left: 21px;
+    border-bottom: 1px dashed #d6d6d6;
+}
+
+.purchase-detail span {
+    display: inline-block;
+    height: 44px;
+    color: #333;
+    margin-left: 30px;
+    font-weight: 700;
+    overflow: hidden;
+}
+
+.purchase-detail .type {
+    position: relative;
+    width: 330px;
+    margin-left: 0;
+    font-size: 14px;
+    padding-left: 12px;
+}
+
+.purchase-detail .type em {
+    display: inline-block;
+    margin-left: 30px;
+    color: #666;
+}
+
+.type .left-line {
+    position: absolute;
+    width: 4px;
+    height: 16px;
+    background: #008CF5;
+    top: 50%;
+    left: 0;
+    margin-top: -8px;
+}
+
+.purchase-handle div {
+    position: relative;
+    display: table;
+    height: 90px;
+    width: 100px;
+    margin: 0 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #666;
+}
+
+.purchase-handle div p {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+.purchase-handle p span {
+    color: #333;
+}
+
+.purchase-handle p .order-num {
+    color: #F88000;
+}
+
+.purchase-handle .btn {
+    width: 70px;
+    height: 26px;
+    line-height: 24px;
+    color: #666;
+    background: #f3f3f3;
+    border: 1px solid #ddd;
+    font-size: 12px;
+    cursor: pointer;
+    outline: none;
+}
+
+.purchase-handle .add-plan {
+    color: #fff;
+    background: #008CF5;
+    border: 1px solid #008CF5;
+}
+
+.purchase-handle .single-price {
+    width: 105px;
+    color: #fff;
+    background: #F88000;
+    border: 1px solid #F88000;
+    margin-bottom: 8px;
+}
+
+#middle-line {
+    position: absolute;
+    left: 0;
+    width: 1156px;
+    height: 1px;
+    background: #d6d6d6;
+
+}
+
+/*分页*/
+.paginorange {
+    padding: 0;
+}
+
+/*采购中 已完成类名切换*/
+.purchasing {
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+    background-image: url("../../img/purchasing.png");
+    background-position: -10px -90px;
+    background-repeat: no-repeat;
+}
+
+.purchasing-end {
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    width: 70px;
+    height: 70px;
+    background-image: url("../../img/purchasing.png");
+    background-position: -10px -10px;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+/*时间插件*/
+.datepicker-container {
+    font-family: "Microsoft YaHei", SimSun, verdana, Sans-Serif;
+}
+
+/*查看订单弹窗*/
+/*.program-mask {*/
+/*position: fixed;*/
+/*top: 0;*/
+/*left: 0;*/
+/*width: 100%;*/
+/*height: 100%;*/
+/*background: rgb(0, 0, 0);*/
+/*opacity: .4;*/
+/*filter: alpha(opacity=40);*/
+/*-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";*/
+/*display: none;*/
+/*z-index: 99;*/
+/*}*/
+
+/*.smart-window {*/
+/*width: 800px;*/
+/*height: 408px;*/
+/*position: fixed;*/
+/*left: 50%;*/
+/*top: 50%;*/
+/*margin-top: -204px;*/
+/*margin-left: -400px;*/
+/*background: #ffffff;*/
+/*z-index: 100;*/
+/*display: none;*/
+
+/*}*/
+
+/*.smart-window h2 {*/
+/*height: 40px;*/
+/*line-height: 40px;*/
+/*padding: 0 20px;*/
+/*background: #008BF7;*/
+/*color: #fff;*/
+/*font-size: 14px;*/
+/*!*font-weight: 700;*!*/
+/*}*/
+
+/*.smart-window h2 i {*/
+/*font-size: 18px;*/
+/*position: absolute;*/
+/*right: 20px;*/
+/*cursor: pointer;*/
+/*}*/
+
+/*.smart-con {*/
+/*padding: 10px 20px 15px;*/
+/*height: 340px;*/
+/*overflow: auto;*/
+/*}*/
+
+/*.smart-con thead th {*/
+/*height: 30px;*/
+/*line-height: 30px;*/
+/*font-size: 12px;*/
+/*color: #656565;*/
+/*background: #F9F9F9;*/
+/*text-align: center;*/
+/*}*/
+
+/*tbody .blank {*/
+/*height: 10px;*/
+/*border: 0;*/
+/*}*/
+
+/*tbody .tbody-top {*/
+/*height: 40px;*/
+/*background: #f9f9f9;*/
+/*padding-left: 15px;*/
+/*font-family: "Microsoft YaHei";*/
+/*font-size: 12px;*/
+/*}*/
+
+/*.tbody-top span {*/
+/*margin-right: 16px;*/
+/*color: #666;*/
+/*font-size: 12px;*/
+/*}*/
+
+/*tbody td {*/
+/*border: 1px solid #E6E6E6;*/
+/*width: 140px;*/
+/*!*text-align: center;*!*/
+/*}*/
+
+/*tbody td:not(.tbody-top) {*/
+/*text-align: center;*/
+/*vertical-align: middle;*/
+/*}*/
+
+/*.goods-item-box {*/
+/*width: 600px;*/
+/*padding-left: 15px;*/
+/*}*/
+
+/*.goods-item {*/
+/*float: left;*/
+/*width: 305px;*/
+/*height: 80px;*/
+/*padding-top: 20px;*/
+/*}*/
+
+/*.goods-number {*/
+/*margin-right: 16px;*/
+/*margin-top: 43px;*/
+/*padding-bottom: 10px;*/
+/*color: #656565;*/
+/*font-family: "microsoft yahei";*/
+/*}*/
+
+/*.goods-msg {*/
+/*width: 200px;*/
+/*margin-left: 20px;*/
+/*text-align: left;*/
+/*height: 70px;*/
+/*display: -webkit-box;*/
+/*-webkit-box-orient: vertical;*/
+/*-webkit-line-clamp: 4;*/
+/*overflow: hidden;*/
+/*color: #656565;*/
+/*}*/
+
+/*.amount {*/
+/*width: 120px;*/
+/*height: 50px;*/
+/*margin: 0 auto;*/
+/*color: #ADADAD;*/
+/*}*/
+
+/*.amount span, .status span {*/
+/*display: inline-block;*/
+/*width: 120px;*/
+/*height: 25px;*/
+/*line-height: 25px;*/
+/*}*/
+
+/*.pay {*/
+/*border-top: 1px solid #E6E6E6;*/
+/*}*/
+
+/*.finish {*/
+/*color: #ADADAD;*/
+/*}*/
+
+/*.status .details {*/
+/*color: #656565;*/
+/*}*/
+
+/*.unpaid {*/
+/*color: #FF4E00;*/
+/*}*/
+
+/*.deliver {*/
+/*color: #65C000;*/
+/*}*/
+
+/*.username span, .icon-user {*/
+/*vertical-align: middle;*/
+/*color: #656565;*/
+/*}*/
+
+/*.menu-down {*/
+/*float: right;*/
+/*margin-left: 20px*/
+/*}*/
+
+/*补全计划弹窗*/
+/*#add-plan {*/
+/*width: 800px;*/
+/*position: fixed;*/
+/*height: 410px;*/
+/*left: 50%;*/
+/*top: 50%;*/
+/*margin-top: -205px;*/
+/*margin-left: -400px;*/
+/*background: #ffffff;*/
+/*z-index: 100;*/
+/*display: none;*/
+/*}*/
+/*#add-plan .add-innner{*/
+/*height: 305px;*/
+/*overflow: auto;*/
+/*border-bottom: 1px solid #e6e6e6;*/
+/*}*/
+/*#add-plan .add-con li {*/
+/*border: 1px solid #e6e6e6;*/
+/*height: 110px;*/
+/*margin-bottom: 10px;*/
+/*}*/
+
+/*#add-plan h2 {*/
+/*height: 40px;*/
+/*line-height: 40px;*/
+/*padding: 0 20px;*/
+/*background: #008BF7;*/
+/*color: #fff;*/
+/*font-size: 14px;*/
+/*font-weight: 700;*/
+/*}*/
+
+/*#add-plan h2 i {*/
+/*font-size: 18px;*/
+/*position: absolute;*/
+/*right: 20px;*/
+/*cursor: pointer;*/
+/*}*/
+
+/*#add-plan .add-con {*/
+/*padding: 10px 20px 15px;*/
+/*}*/
+
+/*#add-plan h3 {*/
+/*height: 40px;*/
+/*line-height: 40px;*/
+/*background: #f9f9f9;*/
+/*padding-left: 15px;*/
+/*font-family: "Microsoft YaHei";*/
+/*font-size: 14px;*/
+/*font-weight: 700;*/
+/*text-align: left;*/
+/*}*/
+
+/*#add-plan .add-con div {*/
+/*line-height: 70px;*/
+/*margin-left: 35px;*/
+/*font-size: 12px;*/
+/*color: #333;*/
+/*}*/
+
+/*#add-plan .add-con .compute {*/
+/*position: relative;*/
+/*}*/
+
+/*#add-plan .add-con .input-price {*/
+/*height: 24px;*/
+/*width: 170px;*/
+/*line-height: 24px;*/
+/*border: 1px solid #ddd;*/
+/*text-align: center;*/
+/*}*/
+
+/*#add-plan .add-num {*/
+/*width: 150px;*/
+/*height: 24px;*/
+/*line-height: 24px;*/
+/*border: 1px solid #ddd;*/
+/*outline: none;*/
+/*text-align: center;*/
+
+/*}*/
+
+/*#add-plan button {*/
+/*position: absolute;*/
+/*border: 0 none;*/
+/*outline: none;*/
+/*width: 25px;*/
+/*height: 26px;*/
+/*line-height: 26px;*/
+/*font-size: 20px;*/
+/*top: 50%;*/
+/*margin-top: -13px;*/
+/*cursor: pointer;*/
+/*}*/
+
+/*.plus {*/
+/*right: 1px;*/
+/*}*/
+
+/*.reduce {*/
+/*left: 37px;*/
+/*}*/
+
+/*#add-plan .add-con span {*/
+/*display: inline-block;*/
+/*margin-left: 20px;*/
+/*}*/
+
+/*#add-plan .sure {*/
+/*width: 60px;*/
+/*height: 20px;*/
+/*color: #fff;*/
+/*background: #F88000;*/
+/*border: 1px solid #F88000;*/
+/*line-height: 20px;*/
+/*text-align: center;*/
+/*cursor: pointer;*/
+/*}*/
+
+/*#add-plan .add-con em {*/
+/*color: #F88000;*/
+/*font-size: 18px;*/
+/*font-family: "microsoft yahei";*/
+/*font-weight: 700;*/
+/*}*/
+/*#add-plan .add-con i{*/
+/*color: #003333;*/
+/*font-size: 12px;*/
+/*font-family: "microsoft yahei";*/
+/*}*/

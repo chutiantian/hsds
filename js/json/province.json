@@ -1,0 +1,14 @@
+{
+    "msg": "调用成功",
+    "code": "1",
+    "ebOmDeliveraddress": [
+        {
+            "regionCode": "11",
+            "regionName": "内蒙古"
+        },
+        {
+            "regionCode": "12",
+            "regionName": "江苏"
+        }
+    ]
+}

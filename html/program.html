@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <title>采购计划</title>
+    <link type="text/css" href="../css/less/common/reset.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/less/common/mCustomScrollbar.min.css"/>
+    <link type="text/css" href="../css/less/common/iconfont.css" rel="stylesheet"/>
+    <link type="text/css" href="../css/less/common/header.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/less/common/page.css"/>
+    <link rel="stylesheet" href="../css/less/common/datepicker.min.css"/>
+    <link rel="stylesheet" href="../css/less/program.css"/>
+</head>
+<body>
+<header class="header">
+    <div class="header-top">
+        <div class="header-top-child">
+            <div class="htc-left">您好，欢迎来到呼和浩特市采购电子交易平台,请
+                <button>登录</button>
+            </div>
+            <div class="htc-right">
+                <span class="hcr-order iconfont icon-dingdan">订单管理(5)</span>
+                <span class="hcr-sys iconfont icon-shezhi">系统设置</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-middle">
+        <div class="header-middle-box boxwidth">
+            <div class='hmb-logo'>
+                <img src="../img/logo.png" alt="logo"/>
+            </div>
+            <div class="hmb-search">
+                <input type="text" name="searchname" placeholder="输入品牌、商品名称..."/>
+                <button><img src="../img/search-btn.png"/></button>
+            </div>
+            <div class="hmb-cart">
+                <a href="buy.html" target="_blank">
+				<span class="hmb-cart-tips iconfont icon-qipao">
+					<i>66</i>
+				</span>
+                    <span class="hmb-cart-icon iconfont icon-gouwuche"></span>
+                    <span>我的购物车&nbsp;></span>
+                    <span class="redBall" style="display:none"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="nav" style="position: relative;">
+
+    <div class="nav-box boxwidth">
+        <div class="classify iconfont icon-type" style="position: relative;">
+            全部商品分类
+            <div class="catalog">
+
+                <div id="catalogs" style="overflow: hidden;background: #0c1431;height: 484px;">
+                    <script id="catalogs-template" type="text/x-handlebars-template">
+                        <!--	<div class="lbf-third-catalog mCustomScrollbar" id="third-catalog-name" >
+                                {{#each purchasecatalog}}
+                                    <div class="pardiv">
+                                       {{#each secondCatalog}}
+                                        <ul>
+                                      {{#each threeCatalog}}
+                                              <li><a href="product.html?catalogCode={{threeSystemCatalogCode}}&status=byPurchaseCatalog&cataname={{threePurchaseCatalogName}}"> {{threePurchaseCatalogName}}</a></li>
+                                          {{/each}}
+                                        </ul>
+
+                                   {{/each}}
+                                  </div>
+                                {{/each}}
+                            </div>-->
+                        <div class="lbf-child-catalog mCustomScrollbar" id="child-catalog-name">
+
+                            {{#each purchasecatalog}}
+                            <ul>
+                                {{#each secondCatalog}}
+                                <li><a class="hrefurl" href="javascript:;" onclick="getparm(this)"
+                                       data-posturl="product.html"
+                                       data-parm="{'status':'byPurchaseCatalog','cataname':'{{secondPurchaseCatalogName}}','catalogcode':'{{secondSystemCatalogCode}}'}">{{secondPurchaseCatalogName}}</a>
+                                </li>
+                                {{/each}}
+                            </ul>
+                            {{/each}}
+
+                        </div>
+                        <div class='left-bar'>
+                            <div class="left-bar-firstlist">
+                                <ul id="catalog-list">
+
+                                    {{#each purchasecatalog}}
+                                    <li class="icon{{handindex @index}}  catalog-li">
+                                        <i></i>
+                                        <span>{{purchaseCatalogName}}</span>
+
+                                    </li>
+                                    {{/each}}
+
+                                </ul>
+                            </div>
+                        </div>
+                    </script>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="nav-list">
+            <ul>
+                <li>
+                    <a href="./index.html">首页</a>
+                </li>
+                <li>
+                    <a href="./program.html">采购计划</a>
+                </li>
+                <li>
+                    <a href="./order.html">订单管理</a>
+                </li>
+                <li>
+                    <a href="./decision.html">决策支持</a>
+                </li>
+                <li>
+                    <a href="./notice.html">监管公告</a>
+                </li>
+                <li class="retailers">
+                    <a>中标电商</a>
+                    <ul>
+                        <li><a href="javascript:;" onclick="getparm(this)" data-posturl="product.html"
+                               data-parm="{'goodssource':'1','status':'byGoodsName','sourcename':'京东'}">京东</a></li>
+                        <li><a href="javascript:;" onclick="getparm(this)" data-posturl="product.html"
+                               data-parm="{'goodssource':'2','status':'byGoodsName','sourcename':'苏宁'}">苏宁</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 目录 -->
+
+
+</div>
+
+<div class="program-con">
+    <div class="purchasing-query">
+        <div>
+            <label for="programCode">采购计划单号：</label>
+            <input type="text" id="programCode" name='programCode' value=""/>
+        </div>
+        <div>
+            <label for="programName">采购计划名称：</label>
+            <input type="text" id="programName" name='programName' value=""/>
+        </div>
+        <div>
+            <label for="bdgagencyName">预算单位：</label>
+            <input type="text" id="bdgagencyName" name='bdgagencyName' value=""/>
+        </div>
+        <div>
+            <label for="acctyear" style="margin-right:24px;">采购年份：</label>
+            <input type="text" data-toggle="datepicker" id="acctyear" name="acctyear" value="" readonly='readonly'/>
+        </div>
+        <div class="menu">
+            <label>采购计划状态：</label>
+            <div id="purchaseState" class="fr"><span style="color:#000; font-size: 14px;">全部</span><i
+                    class="iconfont icon-arrow "></i>
+            </div>
+            <ul class="drop-menu">
+                <li>全部</li>
+                <li>已完成</li>
+                <li>采购中</li>
+            </ul>
+        </div>
+        <div style="font-size:0">
+            <button class='confirm'>确定</button>
+            <button class='reset'>重置</button>
+        </div>
+    </div>
+    <div class="purchasing-con">
+    </div>
+    <!--分页-->
+    <ul class="paginorange" style="margin-top: 0px;"></ul>
+</div>
+<div class="footer">
+    <p>
+        <a href="javascript:;">版权所有：内蒙古大数据&nbsp;&nbsp;&nbsp;技术支持：九次方大数据</a>
+    </p>
+    <p>
+        @copy right by JUSFOUN.com
+    </p>
+</div>
+<script>
+
+    var baseUrl = 'http://192.168.20.119:60030/';
+
+</script>
+<script src="../js/common/jquery.js"></script>
+<script src="../js/common/layer.js"></script>
+<script src="../js/common/jquery.lazyload.js"></script>
+<script src="../js/common/handlebars.min.js"></script> 
+<script src="../js/common/mCustomScrollbar.js"></script>
+<script src="../js/common/public.js"></script>
+<script id="plan-tpl" type="text/x-handlebars-template">
+    {{#if list}}
+    <ul>
+        {{#each list}}
+        <li>
+            <div class="purchase-tit">
+                <h2>
+                    <i class="year tc">{{acctyear}}</i>
+                    {{programName}}
+                    <em>{{programCode}}</em>
+                    <span class="fr program-price">计划总额：<b>{{puchaseAmount}}</b> 元</span>
+                </h2>
+                <p>
+                    <span>预算单位：{{govCname}} </span>
+                    <span>项目联系人：{{linkMan}} </span>
+                    <span>联系电话: {{linkTel}}</span>
+                </p>
+            </div>
+
+            <div class="purchase-list clearfix" index={{@index}}>
+                {{#each purchaseheadingList}}
+                <div class="purchase-detail fl">
+                    <p>
+    <span class="type">{{purchaseListName}}<em>{{purchaseCatalogName}}</em><i
+            class="left-line"></i></span>
+                        <span>采购单价(元)：{{unitprice}}</span>
+                        <span>采购总价(元)：{{totalamt}}</span>
+                    </p>
+                    {{#if purchaseModel}}
+                    <p>
+                        {{purchaseModel}}
+                    </p>
+                    {{else}}
+                    <p>
+                        无
+                    </p>
+                    {{/if}}
+                </div>
+                <div class="purchase-handle fr">
+                    <div class="fl">
+                        <p>
+                            计划数量：<br/>
+                            <span>{{num}}</span>&nbsp;&nbsp;箱
+                        </p>
+                    </div>
+                    <div class="fl">
+                        <p>
+                            已采购数量：<br>
+                            <span class="order-num">{{purchaseNum}}</span>&nbsp;&nbsp;箱
+                        </p>
+                    </div>
+                    <div class="fl">
+                        <p>
+                            {{#if purchaseNum}}
+                            <button class="btn view" href="javascript:;" program-item-id="{{programItemId}}"
+                                    purchase-heading-id="{{id}}">查看订单
+                            </button>
+                            {{else}}
+                            <button class="btn single-price" href="javascript:;" index="{{@index}}">按单价选择商品</button>
+                            {{/if}}
+                        </p>
+                    </div>
+                    <span id="middle-line"></span>
+                </div>
+                {{/each}}
+            </div>
+            {{#if purchaseState}}
+            <i class='purchasing-end'></i>
+            {{else}}
+            <i class='purchasing'></i>
+            {{/if}}
+        </li>
+        {{/each}}
+    </ul>
+    {{else}}
+    <h1>
+        查无采购计划!
+    </h1>
+    {{/if}}
+</script>
+<script src="../js/common/datepicker.min.js"></script>
+<script src="../js/common/datepicker.zh-CN.js"></script>
+<script src="../js/program.js"></script>
+</body>
+</html>

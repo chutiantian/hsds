@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content="author,email address"/>
+    <meta name="robots" content="index,follow"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <meta name="renderer" content="ie-stand"/>
+    <title>服务支持</title>
+    <link rel="stylesheet" href="../css/less/common/reset.css"/>
+    <link rel="stylesheet" href="../css/less/common/mCustomScrollbar.min.css"/>
+    <link rel="stylesheet" href="../css/less/common/iconfont.css"/>
+    <link rel="stylesheet" href="../css/less/common/header.css"/>
+    <link rel="stylesheet" href="../css/less/common/page.css"/>
+    <link rel="stylesheet" href="../css/less/service-support.css"/>
+</head>
+<body>
+<!--引入头部-->
+<div th:include="eb/html/components/header :: ebheader"></div>
+<div class="main clearfix">
+    <div class="fl  provider">r
+        <ul>
+            <li>京东</li>
+            <li>苏宁</li>
+        </ul>
+    </div>
+    <div class="fr provider-detail">
+        <ul>
+            <li><img src="" alt="">00000000000</li>
+            <li><img src="" alt="">00000000000</li>
+        </ul>
+    </div>
+</div>
+
+<div th:include="eb/html/components/footer :: ebfooter"></div>
+<script th:src="@{/js/decision.js}"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+{
+  "msg": "调用成功",
+  "code": "1",
+  "orderhisList": [
+    {
+      "id": null,
+      "extra": null,
+      "creator": null,
+      "createDate": null,
+      "regenerator": null,
+      "updateDate": null,
+      "delFlag": 0,
+      "user": null,
+      "createUser": null,
+      "updateUser": null,
+      "orderitemId": null,
+      "goodsId": "93f0420c78c348a19ec403d52741cf5b",
+      "goodsName": "惠普（HP）暗影精灵II代 15.6英寸游戏笔记本（i5-6300HQ 4G 128SSD+1T GTX960M 2G GDDR5 IPS屏 FHD）",
+      "goodsDesc": "<table cellpadding='0' cellspacing='1' width='100%' border='0' class='Ptable'><tr><th class='tdTitle' colspan='2'>实质参数</th><tr><tr><td class='tdTitle'>适用人群</td><td>18-24岁</td></tr><tr><td class='tdTitle'>钥匙扣类型</td><td>卡通型钥匙扣</td></tr><tr><td class='tdTitle'>国产/进口</td><td>国产</td></tr><tr><td class='tdTitle'>品牌</td><td>狼人(langren)</td></tr><tr><td class='tdTitle'>型号 测试</td><td>123</td></tr><tr><td class='tdTitle'>面料主材质（内）</td><td>硅胶</td></tr><tr><td class='tdTitle'>风格</td><td>OL通勤</td></tr><tr><th class='tdTitle' colspan='2'>细节参数</th><tr><tr><td class='tdTitle'>适用人群</td><td>18-24岁</td></tr><tr><td class='tdTitle'>钥匙扣类型</td><td>卡通型钥匙扣</td></tr><tr><td class='tdTitle'>国产/进口</td><td>国产</td></tr><tr><td class='tdTitle'>品牌</td><td>狼人(langren)</td></tr><tr><td class='tdTitle'>型号 测试</td><td>123</td></tr><tr><td class='tdTitle'>面料主材质（内）</td><td>硅胶</td></tr><tr><td class='tdTitle'>风格</td><td>OL通勤</td></tr><tr><th class='tdTitle' colspan='2'>主观参数</th><tr><tr><td class='tdTitle'>适用人群</td><td>18-24岁</td></tr><tr><td class='tdTitle'>钥匙扣类型</td><td>卡通型钥匙扣</td></tr><tr><td class='tdTitle'>国产/进口</td><td>国产</td></tr><tr><td class='tdTitle'>品牌</td><td>狼人(langren)</td></tr><tr><td class='tdTitle'>型号 测试</td><td>123</td></tr><tr><td class='tdTitle'>面料主材质（内）</td><td>硅胶</td></tr><tr><td class='tdTitle'>风格</td><td>OL通勤</td></tr></table>",
+      "goodsPrice": 100.00,
+      "goodsSource": 1,
+      "imagePath": "/img/join-cart.png"
+    },
+    {
+      "id": null,
+      "extra": null,
+      "creator": null,
+      "createDate": null,
+      "regenerator": null,
+      "updateDate": null,
+      "delFlag": 0,
+      "user": null,
+      "createUser": null,
+      "updateUser": null,
+      "orderitemId": null,
+      "goodsId": "93f0420c78c348a19ec403d52741cf5b",
+      "goodsName": "惠普（HP）暗影精灵II代 15.6英寸游戏笔记本（i5-6300HQ 4G 128SSD+1T GTX960M 2G GDDR5 IPS屏 FHD）",
+      "goodsDesc": "<table cellpadding='0' cellspacing='1' width='100%' border='0' class='Ptable'><tr><th class='tdTitle' colspan='2'>实质参数</th><tr><tr><td class='tdTitle'>适用人群</td><td>18-24岁</td></tr><tr><td class='tdTitle'>钥匙扣类型</td><td>卡通型钥匙扣</td></tr><tr><td class='tdTitle'>国产/进口</td><td>国产</td></tr><tr><td class='tdTitle'>品牌</td><td>狼人(langren)</td></tr><tr><td class='tdTitle'>型号 测试</td><td>123</td></tr><tr><td class='tdTitle'>面料主材质（内）</td><td>硅胶</td></tr><tr><td class='tdTitle'>风格</td><td>OL通勤</td></tr><tr><th class='tdTitle' colspan='2'>细节参数</th><tr><tr><td class='tdTitle'>适用人群</td><td>18-24岁</td></tr><tr><td class='tdTitle'>钥匙扣类型</td><td>卡通型钥匙扣</td></tr><tr><td class='tdTitle'>国产/进口</td><td>国产</td></tr><tr><td class='tdTitle'>品牌</td><td>狼人(langren)</td></tr><tr><td class='tdTitle'>型号 测试</td><td>123</td></tr><tr><td class='tdTitle'>面料主材质（内）</td><td>硅胶</td></tr><tr><td class='tdTitle'>风格</td><td>OL通勤</td></tr><tr><th class='tdTitle' colspan='2'>主观参数</th><tr><tr><td class='tdTitle'>适用人群</td><td>18-24岁</td></tr><tr><td class='tdTitle'>钥匙扣类型</td><td>卡通型钥匙扣</td></tr><tr><td class='tdTitle'>国产/进口</td><td>国产</td></tr><tr><td class='tdTitle'>品牌</td><td>狼人(langren)</td></tr><tr><td class='tdTitle'>型号 测试</td><td>123</td></tr><tr><td class='tdTitle'>面料主材质（内）</td><td>硅胶</td></tr><tr><td class='tdTitle'>风格</td><td>OL通勤</td></tr></table>",
+      "goodsPrice": 200.00,
+      "goodsSource": 1,
+      "imagePath": "/img/goods-hp.png"
+    },
+    {
+      "id": null,
+      "extra": null,
+      "creator": null,
+      "createDate": null,
+      "regenerator": null,
+      "updateDate": null,
+      "delFlag": 0,
+      "user": null,
+      "createUser": null,
+      "updateUser": null,
+      "orderitemId": null,
+      "goodsId": "93f0420c78c348a19ec403d52741cf5b",
+      "goodsName": "惠普（HP）暗影精灵II代 15.6英寸游戏笔记本（i5-6300HQ 4G 128SSD+1T GTX960M 2G GDDR5 IPS屏 FHD）",
+      "goodsDesc": "<table cellpadding='0' cellspacing='1' width='100%' border='0' class='Ptable'><tr><th class='tdTitle' colspan='2'>实质参数</th><tr><tr><td class='tdTitle'>适用人群</td><td>18-24岁</td></tr><tr><td class='tdTitle'>钥匙扣类型</td><td>卡通型钥匙扣</td></tr><tr><td class='tdTitle'>国产/进口</td><td>国产</td></tr><tr><td class='tdTitle'>品牌</td><td>狼人(langren)</td></tr><tr><td class='tdTitle'>型号 测试</td><td>123</td></tr><tr><td class='tdTitle'>面料主材质（内）</td><td>硅胶</td></tr><tr><td class='tdTitle'>风格</td><td>OL通勤</td></tr><tr><th class='tdTitle' colspan='2'>细节参数</th><tr><tr><td class='tdTitle'>适用人群</td><td>18-24岁</td></tr><tr><td class='tdTitle'>钥匙扣类型</td><td>卡通型钥匙扣</td></tr><tr><td class='tdTitle'>国产/进口</td><td>国产</td></tr><tr><td class='tdTitle'>品牌</td><td>狼人(langren)</td></tr><tr><td class='tdTitle'>型号 测试</td><td>123</td></tr><tr><td class='tdTitle'>面料主材质（内）</td><td>硅胶</td></tr><tr><td class='tdTitle'>风格</td><td>OL通勤</td></tr><tr><th class='tdTitle' colspan='2'>主观参数</th><tr><tr><td class='tdTitle'>适用人群</td><td>18-24岁</td></tr><tr><td class='tdTitle'>钥匙扣类型</td><td>卡通型钥匙扣</td></tr><tr><td class='tdTitle'>国产/进口</td><td>国产</td></tr><tr><td class='tdTitle'>品牌</td><td>狼人(langren)</td></tr><tr><td class='tdTitle'>型号 测试</td><td>123</td></tr><tr><td class='tdTitle'>面料主材质（内）</td><td>硅胶</td></tr><tr><td class='tdTitle'>风格</td><td>OL通勤</td></tr></table>",
+      "goodsPrice": 200.00,
+      "goodsSource": 2,
+      "imagePath": "/img/goods-item1.png"
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <title>购物车</title>
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../css/less/common/reset.css"/>
+    <link rel="stylesheet" href="../css/less/common/mCustomScrollbar.min.css"/>
+    <link rel="stylesheet" href="../css/less/common/iconfont.css"/>
+    <link type="text/css" href="../../css/less/common/header.css" rel="stylesheet"/>
+    <link type="text/css" href="../../css/less/buy.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../../css/less/jquery.step.css"/>
+</head>
+
+<body>
+<header class="header">
+	<div class="header-top">
+		<div class="header-top-child">
+			<div class="htc-left">欢迎&nbsp;XXXXX</div>
+			<div class="htc-right">
+				<span class="hcr-order iconfont icon-dingdan">订单管理(5)</span>
+				<span class="hcr-sys iconfont icon-shezhi">系统设置</span>
+			</div>
+		</div>
+	</div>	
+
+	<div class="header-middle">
+		<div class="header-middle-box boxwidth buy-head" >
+			<div class='hmb-logo'>
+				<a href="/html/index.html"><img src="../img/logo.png" alt="logo" /></a>
+			</div>
+
+			<div class="" style="display:inline-block;">
+				<div class="step-body" id="myStep">
+					<div class="step-header" style="width:80%">
+						<ul>
+							<li><p>我的购物车</p></li>
+							<li><p>填写核对订单信息</p></li>
+							<li><p>成功提交订单</p></li>
+						</ul>
+					</div>
+					<div class="step-content" style="display:none;">
+						<div class="step-list">我的购物车</div>
+						<div class="step-list">填写核对订单信息</div>
+						<div class="step-list">成功提交订单</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</header>	
+
+<div class='main'>
+    <div class="detail-h365 detail-w1200">
+        <div class="buy buy-w1200 buy-list" id="buy-list">
+
+        </div>
+    </div>
+    <div class="item-empty">
+        <div class="img">
+            <div class="left"><img src="/img/shopping-car.png"/></div>
+            <div class="right">
+                <li class="text buy-text">购物车还是空的呢，快去购物吧~~</li>
+                <br>
+                <li class="text buy-mt50">
+                    <button class="buy-btn">返回采购计划</button>
+                </li>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <p>
+        <a href="javascript:;">版权所有：内蒙古大数据 技术支持：九次方大数据</a>
+    </p>
+    <p>
+        @copy right by JUSFOUN.com
+    </p>
+</div>
+<script>
+
+    var baseUrl = 'http://192.168.20.119:60030/';
+
+</script>
+
+<script src="../js/common/jquery.js"></script>
+<script src="../js/common/layer.js"></script>
+<script src="../js/common/jquery.lazyload.js"></script>
+<script src="../js/common/handlebars.min.js"></script>
+
+
+<script type="x/template" id="t-buy">
+    <div class="item-title">
+        <li class="item-checktitle linh">
+            <input type="checkbox" class="buy-checkall" id="checkall1"/>
+            &nbsp;&nbsp;
+            <label for="checkall1">全选</label>
+        </li>
+        <li class="item-nametitle linh">商品信息</li>
+        <li class="item-type linh">商城</li>
+        <li class="item-price linh">价格</li>
+        <li class="item-count linh">数量</li>
+        <li class="item-countn linh">小计</li>
+        <li class="item-mod linh">操作</li>
+    </div>
+    {{#each this}}
+    <div class="sc order-item">
+        <div class="cgd">计划单号:{{programCode}}</div>
+        <div class="item-content  {{#if @last}}item-last{{/if}}">
+            <li class="item-check">
+                <input style="text-align: left" value={{id}} class="buy-check" type="checkbox"/>
+            </li>
+            <li class="item-name">
+                <a href="detail.html?goodsid={{id}}">
+                <img width="94" height="85" src="../img/buy-goods-list.gif"
+                                       tsrc="{{goodsPicture}}"/>
+                <span style="text-align: left">{{goodsName}}</span>
+                </a>
+            </li>
+            <li class="item-type">
+                {{#eq cartSorce 2}}
+                <img src="../img/jd.png"/> {{/eq}} {{#eq cartSorce 1}}
+                <img src="../img/jd.png"/> {{/eq}} {{#eq cartSorce 3}}
+                <img src="../img/sn.png"/> {{/eq}} {{#eq cartSorce 4}}
+                <img src="../img/taobao.png"/> {{/eq}}
+            </li>
+            <li class="item-price">￥<span id="buy-list{{index}}">{{cartPrice}}</span></li>
+            <li class="item-count">
+                <div style="position: relative;overflow: hidden;height: 22px;line-height: 20px;width: 80px;margin: 0 auto">
+                    <!--<a href="javascript:;" class="count-border  buy-cut">-</a>-->
+                    <input type="text" readonly value="{{cartNum}}"/>
+                    <!--<a href="javascript:;"  class="count-border  buy-add  jia">+</a>-->
+                </div>
+
+            </li>
+            <li class="item-countn">￥<span class="buy-coutp" id="buy-list-countP{{index}}">{{subtotal}}</span></li>
+            <li class="item-mod">
+                <a href="javascript:;" class="delete" did="{{id}}">删除</a>
+            </li>
+        </div>
+    </div>
+    {{/each}}
+    <div class="item-buttom">
+        <li class="item-check">
+            <input type="checkbox" class="buy-checkall" id="checkall2"/>
+            &nbsp;&nbsp;
+            <label for="checkall2">全选</label>
+        </li>
+        <li class="item-name">
+            <a href="#" id="deleteAll">删除选中的商品</a>
+        </li>
+        <li class="item-type"></li>
+        <li class="item-price"></li>
+        <li class="item-count">已选择&nbsp;<span class="yellow countNum" id="selectedTotal">0</span><span class="">&nbsp;件商品</span>
+        </li>
+        <li class="item-countn">总价：<span class="yellow" style="font-size: 18px;">￥</span><span
+                class="countPrice yellow" style="font-size: 18px;">0</span></li>
+        <li class="item-button">
+            <button class="order-btn">去结算</button>
+        </li>
+    </div>
+
+</script>
+<script src="../js/jquery.step.js"></script>
+<script src="../js/buy.js"></script>
+</body>
+
+</html>

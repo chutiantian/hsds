@@ -1,0 +1,61 @@
+/* CSS Document */
+.box {
+  width: 450px;
+  margin: 20px auto;
+}
+.left-pro {
+  width: 450px;
+  border: 1px solid #ccc;
+  text-align: left;
+  float: left;
+  background-color: #FFF;
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+}
+.left-pro .t1 {
+  width: 66px;
+  float: left;
+  height: 350px;
+  overflow: hidden;
+}
+.left-pro .t2 {
+  width: 352px;
+  text-indent: 0;
+  float: left;
+  padding-left: 10px;
+}
+.left-pro .t2 img {
+  text-indent: 0;
+}
+#showArea img {
+  cursor: pointer;
+  display: block;
+  margin-bottom: 5px;
+  width: 66px;
+  padding: 1px;
+  border: 1px solid #ccc;
+  height: 66px;
+  float: left;
+}
+#main_img {
+  cursor: pointer;
+  display: block;
+}
+#gotop {
+  cursor: pointer;
+  display: block;
+  margin-left: 9px;
+}
+#gobottom {
+  cursor: pointer;
+  display: block;
+  margin-left: 9px;
+}
+#showArea {
+  height: 365px;
+  margin: 0px;
+  overflow: hidden;
+}

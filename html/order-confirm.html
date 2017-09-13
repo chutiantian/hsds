@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<title>订单确认</title>
+		<link  rel="stylesheet" type="text/css" href="../../css/less/common/reset.css" />
+		<link  rel="stylesheet" type="text/css" href="../../css/less/common/header.css" />
+		<link rel="stylesheet" type="text/css" href="../css/less/order-confirm.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/less/jquery.step.css" />
+	</head>
+	<body>
+		<header class="header">
+	<div class="header-top">
+		<div class="header-top-child">
+			<div class="htc-left">欢迎&nbsp;XXXXX</div>
+			<div class="htc-right">
+				<span class="hcr-order iconfont icon-dingdan">订单管理(5)</span>
+				<span class="hcr-sys iconfont icon-shezhi">系统设置</span>
+			</div>
+		</div>
+	</div>	
+
+	<div class="header-middle">
+		<div class="header-middle-box boxwidth buy-head" >
+			<div class='hmb-logo'>
+				<a href="/html/index.html"><img src="../img/logo.png" alt="logo" /></a>
+			</div>
+
+			<div class="" style="display:inline-block;">
+				<div class="step-body" id="myStep">
+					<div class="step-header" style="width:80%">
+						<ul>
+							<li><p>我的购物车</p></li>
+							<li><p>填写核对订单信息</p></li>
+							<li><p>成功提交订单</p></li>
+						</ul>
+					</div>
+					<div class="step-content" style="display:none;">
+						<div class="step-list">我的购物车</div>
+						<div class="step-list">填写核对订单信息</div>
+						<div class="step-list">成功提交订单</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</header>	
+
+		<div class='main'>
+			<div class="order-confirm-title">填写并核对订单信息</div>
+			<div class="buy-confirm">
+				<div class="addr-warp">
+					<div class="addr">
+						<h5 class="addr-h5">收货地址</h5>
+						<div class="add-addr">
+							<a href="#" class="mod">新增收货地址</a>
+						</div>
+					</div>
+					<div class="content addr-cuurent">
+						
+					</div>
+					<script type="x/template" id="shippingaddressOne">
+						{{#this}}
+							<li class="more-li">
+								<span class="span1">{{receiver}}</span>
+								<span class="span2"><span class="oneName">{{oneName}}</span> <span class="twoName">{{twoName}}</span> <span class="threeName">{{threeName}}</span> <span class="receiveAddress">{{receiveAddress}}</span></span>
+								<span class="span3">{{receiveTel}}</span>
+								<span id="btn7" class="addr-revise">修改</span>
+								<span class="addr-delete" style="color:red;cursor: pointer;">删除</span>
+								<span class="addr-choose" style="color:#025ab5;"></span>
+							</li>
+						{{/this}}
+					</script>
+					<script type="x/template" id="shippingaddress">
+						{{#each this}}
+							<li class="more-li">
+								<span class="span1">{{receiver}}</span>
+								<span class="span2"><span class="oneName">{{oneName}}</span> <span class="twoName">{{twoName}}</span> <span class="threeName">{{threeName}}</span> <span class="receiveAddress">{{receiveAddress}}</span></span>
+								<span class="span3">{{receiveTel}}</span>
+								<span id="btn7" class="addr-revise">修改</span>
+								<span class="addr-delete" style="color:red;cursor: pointer;">删除</span>
+								<span class="addr-choose" style="color:#025ab5;"></span>
+							</li>
+						{{/each}}
+					</script>
+					<div class="content more-addr">
+						<span class="mor-add" style="display:block;float:left;">点击更多地址</span>
+						<span class="mor-addS" style="display:none;float:left;">收起更多地址</span>
+						<b class="addr-ico"></b>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="addr-warp">
+					<div class="invoice">
+						<div class="addr">
+							<h5>发票信息</h5></div>
+						<div class="content">
+							<span class="content-span">发票抬头名称</span>
+							<input type="text" readonly="readonly" class="input w300 ml10" style="margin-left:8px;width:300px;padding-left:5px ;height: 30px;line-height: 30px;" placeholder=""/>
+						</div>
+					</div>
+				</div>
+				<div class="addr-warp">
+					<div class="h85">
+						<div class="addr">
+							<h5>支付方式</h5></div>
+						<div>
+							<div class=" select-item select-selected w100  button-group"><b></b>货到付款</div>
+							<div class=" select-item ml30 w100 button-group"><b></b>账期支付</div>
+						</div>
+					</div>
+				</div>
+				<div class="goods-title">
+					<div class="h40">
+						<div class="addr">
+							<h5>商品列表</h5>
+						</div>
+					</div>
+				</div>
+				<div class="w1160 buy-pos">					
+									
+				</div>
+				<script type="x/template" id="goods-list-template">
+					{{#each this}}
+						<div class="buy  border-bottom">
+							<div class="item-title">
+								<li class="item-name linh">计划订单号：{{programCode}}</li>
+								<li class="item-type linh">供应商</li>
+								<li class="item-price linh">价格</li>
+								<li class="item-count linh">数量</li>
+								<li class="item-countn linh">小计</li>
+							</div>
+							<div class="item-content">
+								<li class="item-name">
+									<img width="94" height="85" src="{{goodsPicture}}"/>
+									<span style="text-align: left;"><a href="./detail.html?goodsid={{goodsId}}" target="_blank" class="aa">{{goodsName}}</a></span>
+								</li>
+								<li class="item-type">
+									<img src="../img/jd.png"/>
+								</li>
+								<li class="item-price">￥{{cartPrice}}</li>
+								<li class="item-count">{{cartNum}}</li>
+								<li class="item-countn total">￥{{subtotal}}</li>
+							</div>
+						</div>
+					{{/each}}
+				</script>
+			</div>
+			<div class="buy-confirm-bottom " style="margin-bottom:10px;">
+				<ul class="">
+					<li class="pay">应付金额：<span class="pay-text"></span></li>
+				</ul>
+				<div class="addrinfo goods-info">
+				</div>
+				<script type="x/template" id="goods-info-template">
+					<li class="">收货信息：{{receiver}} {{oneName}} {{twoName}} {{threeName}} {{receiveAddress}}</li>
+				</script>					
+				<ul class="addrinfo pb10">
+					<li><button class="order-btn">提交订单</button></li>
+				</ul>
+			</div>
+		</div>
+		<div style="display:none;" id="dia-warp"></div>		
+		<div class="footer">
+    <p>
+        <a href="javascript:;">版权所有：内蒙古大数据 技术支持：九次方大数据</a>
+    </p>
+    <p>
+        @copy right by JUSFOUN.com
+    </p>
+</div>
+<script>
+
+    var baseUrl = 'http://192.168.20.119:60030/';
+
+</script>
+
+<script src="../js/common/jquery.js"></script>
+<script src="../js/common/layer.js"></script>
+<script src="../js/common/jquery.lazyload.js"></script>
+<script src="../js/common/handlebars.min.js"></script>
+
+							
+		<script type="x/template" id="t-order-success">
+			<div class="order-success">
+				<div class="">
+					<div class="success">
+						<div class="order-warp">            
+							<div class="order-title" style="margin-top:20px;">订单提交成功</div>
+							<div style="font-size:14px;margin-top:20px;">							
+								{{#each this}}
+									<li style="text-align: center;">
+										<span>订单号:</span>
+										<span style="display:inline-block;width:115px;text-align:center;">{{orderNo}}</span>
+										<span class="pl40">
+											商城:<img src="../img/jd.png" style="padding-left: 20px;"/>
+										</span>
+										<span class="pl40">应付金额（元）:</span>
+										<span class="red">{{totalPrice}}元</span>
+										<span class="pl25"><a href="./order-detail.html" style="color:#008cf8;" target="_blank" class="p125a">查看订单详情</a></span>
+									</li>
+								{{/each}}	
+							</div>
+							<div class="order-back">
+								<a href="./program.html" target="_blank">返回采购计划</a>
+							</div>                               							
+						</div>						
+					</div>
+				</div>
+			</div>
+		</script>
+						
+		<script type="x/template" id="t-order-failed">
+			<div class="order-success">
+				<div class="">
+					<div class="success">
+						<div class="order-warp">            
+							<div class="order-title">订单提交失败</div>
+							<div>
+								{{#each this}}																													 
+									<div class="ord"><span class="order-p" style="font-family:'Arial Negreta', 'Arial';font-weight:700;">计划单号 :</span><span style="font-family:'Arial Normal', 'Arial';font-weight:400;font-size:14px;width:80px;display:inline-block">{{programCode}}</span><span style="font-size: 14px;color:red;">失败原因: {{info}}</span></div>
+									{{#each list}}
+										<table border="1" style="width:752px;height:69px; table-layout:fixed;" >											
+											<tr style="background:#f2f2f2;text-align:center;">
+												<td style="width:335px;">商品名称</td>
+												<td style="width:128px;">商城</td>
+												<td style="width:118px;">应付金额</td>
+											</tr>
+											<tr style="text-align:center;">
+												<td style="width:335px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="{{goodName}}"><a href="./detail.html?goodsid={{goodId}}" target="_blank" class="aa">{{goodName}}</a></td>
+												<td style="width:128px;"><img src="../img/jd.png"/></td>
+												<td style="width:118px;">{{goodPrice}}元</td>
+											</tr>								
+										</table>
+									{{/each}}									 							
+								{{/each}}
+							</div>                               
+							<div class="order-back">
+								<a href="./program.html" target="_blank">返回采购计划</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</script>
+
+		<script type="x/template" id="t-order-success-failed">
+			<div class="order-success">
+				<div class="">
+					<div class="success">
+						<div class="order-warp">            
+							<div class="order-title">订单提交失败</div>
+							<div>
+								{{#each this.failed}}																													 
+									<div class="ord"><span class="order-p" style="font-family:'Arial Negreta', 'Arial';font-weight:700;">计划单号:</span><span style="font-family:'Arial Normal', 'Arial';font-weight:400;font-size:14px;width:80px;display:inline-block">{{programCode}}</span><span style="font-size: 14px;color:red;">失败原因:{{info}}</span></div>
+									{{#each list}}
+										<table border="1" style="width:752px;height:69px;table-layout:fixed;">											
+											<tr style="background:#f2f2f2;text-align:center;">
+												<td style="width:335px;">商品名称</td>
+												<td style="width:128px;">商城</td>
+												<td style="width:118px;">应付金额</td>
+											</tr>
+											<tr style="text-align:center;">
+												<td style="width:335px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="{{goodName}}"><a href="./detail.html?goodsid={{goodId}}" target="_blank" class="aa">{{goodName}}</a></td>
+												<td style="width:128px;"><img src="../img/jd.png"/></td>
+												<td style="width:118px;">{{goodPrice}}元</td>
+											</tr>								
+										</table>
+									{{/each}}									 							
+								{{/each}}
+							</div>        
+							<div class="order-title" style="margin-top:20px;">订单提交成功</div>
+							<div style="font-size:14px;margin-top:20px;">								
+								{{#each this.success}}
+									<li style="text-align: center;">
+										<span>订单号:</span>
+										<span style="display:inline-block;width:115px;text-align:center;">{{orderNo}}</span>
+										<span class="pl40">
+											商城:<img src="../img/jd.png" style="padding-left: 20px;"/>
+										</span>
+										<span class="pl40">应付金额（元）:</span>
+										<span class="red">{{totalPrice}}元</span>
+										<span class="pl25"><a href="./order-detail.html" style="color:#008cf8;" target="_blank" class="p125a">查看订单详情</a></span>
+									</li>
+								{{/each}}	
+							</div>                               
+							<div class="order-back">
+								<a href="./program.html" target="_blank">返回采购计划</a>
+							</div>                               
+						</div>
+					</div>
+				</div>
+			</div>			
+		</script>
+		<script type="x/template" id="province-template">
+			{{#each this}}				
+				<li value="{{regionCode}}">{{regionName}}</li>
+			{{/each}}
+		</script>
+		<script type="x/template" id="city-template">
+			{{#each this}}				
+				<li value="{{regionCode}}">{{regionName}}</li>
+			{{/each}}
+		</script>
+		<script type="x/template" id="area-template">
+			{{#each this}}				
+				<li value="{{regionCode}}">{{regionName}}</li>
+			{{/each}}
+		</script>
+		<script src="../js/jquery.step.js"></script>
+		<script src="../js/order-confirm.js"></script>
+		
+	</body>
+</html>

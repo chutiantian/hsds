@@ -1,0 +1,207 @@
+.container {
+    position: relative;
+    width:1200px;
+    margin: 0 auto;
+    color: #666666;
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+}
+.main {
+    margin-top: 20px;
+}
+/*!*左侧列表*!*/
+.affix {
+    float: left;
+    width: 140px;
+}
+.order-list {
+    padding: 0 0 0 20px;
+}
+.order-list li {
+    height: 28px;
+    font-size: 14px;
+    color: #666666;
+}
+.order-center {
+    color:#666666;
+    font-weight: 600;
+}
+.order-container {
+    float: left;
+    width: 1060px;
+    min-height: 400px;
+    box-sizing: border-box;
+}
+.order-container .box {
+    display: none;
+    min-height: 300px;
+}
+.order-container .box.active {
+    display: block;
+}
+.my-order {
+    height:50px;
+    line-height: 50px;
+    padding-left: 15px;
+    border: 1px solid #e5e5e5;
+}
+.my-order-box {
+    border: 1px solid #e5e5e5;
+    margin-top: 15px;
+    padding: 15px;
+    margin-bottom:25px;
+}
+.order-box {
+    height:27px;
+    line-height:27px;
+    margin-bottom:15px;
+}
+.search {
+    float: right;
+    width: 240px;
+    height: 27px;
+    border: 1px solid #e5e5e5;
+    padding-left: 10px;
+    color: #666666;
+}
+.order-box .icon-sousuo {
+    position: relative;
+    left: 950px;
+    color: #0A93F0;
+    cursor: pointer;
+}
+.details-box {
+    width: 100%;
+}
+.details-box thead th {
+    height: 40px;
+    line-height: 40px;
+    background: #F5F5F5;
+    font-size: 14px;
+}
+tbody .blank {
+    height: 15px;
+    border: 0;
+}
+tbody .tbody-top {
+    height: 40px;
+    box-sizing: border-box;
+    background: #F5F5F5;
+    padding-left: 15px;
+    text-align: left;
+}
+.tbody-top span {
+    width: 130px;
+    margin-right: 50px;
+}
+tbody td{
+    text-align: center;
+    border: 1px solid #E6E6E6;
+    width: 117px;
+}
+tbody td:not(.tbody-top){
+    text-align: center;
+    /*vertical-align: top;*/
+}
+.goods-item-box {
+    padding-left:15px;
+    width:600px;
+    box-sizing:border-box;
+}
+.goods-item {
+    float:left;
+    width:400px;
+    height:100px;
+}
+.goods-number p {
+    float:left;
+    width:150px;
+    height:100px;
+    box-sizing:border-box;
+    padding-top: 25px;
+}
+.goods-img {
+    width:105px;
+    height:100px;
+    padding-top: 20px;
+}
+.goods-img span {
+    display: inline-block;
+    width:80px;
+    height:74px;
+}
+.goods-img span img{
+    width:100%;
+    height:100%;
+}
+.goods-msg {
+    width:250px;
+    padding-left:20px;
+    box-sizing:border-box;
+    text-align:left;
+    padding-top: 25px;
+    line-height: 20px;
+}
+.amount {
+    width: 117px;
+    height: 50px;
+    margin: 0 auto;
+    color: #ADADAD;
+}
+.amount span , .status span {
+    display: inline-block;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+}
+.pay {
+    border-top: 1px solid #E6E6E6;
+}
+.finish {
+    color: #ADADAD;
+}
+.unpaid {
+    color: #FF4E00;
+}
+.deliver {
+    color: #65C000;
+}
+.username .icon-user {
+    vertical-align: middle;
+}
+.order-status-list {
+    position: absolute;
+    right: 16px;
+    top: 185px;
+    width: 140px;
+    cursor: pointer;
+    display: none;
+}
+.order-status-list .order-status-item {
+    text-align: center;
+    height:30px;
+    line-height: 30px;
+    background: #fff;
+}
+.order-status-list .order-status-item:hover {
+    background: #F5F5F5;
+}
+.all-status {
+    cursor: pointer;
+}
+.all-status:hover .order-status-list {
+    display: block;
+}
+.item .unevaluate:hover {
+    text-decoration: none;
+}
+.item .unevaluate {
+    display: inline-block;
+    width:80px;
+    height:30px;
+    line-height: 30px;
+    border: 0;
+    background: #028FF3;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}

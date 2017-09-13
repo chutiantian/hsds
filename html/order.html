@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="keywords" content=""/>
+  <meta name="description" content=""/>
+  <meta name="author" content="author,email address"/>
+  <meta name="robots" content="index,follow"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="renderer" content="ie-stand"/>
+  <title>订单管理</title>
+  <link rel="stylesheet" href="../css/less/common/reset.css"/>
+  <link rel="stylesheet" href="../css/less/common/mCustomScrollbar.min.css"/>
+  <link rel="stylesheet" href="../css/less/common/iconfont.css"/>
+  <link rel="stylesheet" href="../css/less/common/header.css"/>
+  <link rel="stylesheet" href="../css/less/common/page.css"/>
+  <link rel="stylesheet" href="../css/less/order.css" />
+  <style>
+    .search {
+      line-height: 27px;
+    }
+    .search::-ms-clear, .search::-ms-reveal {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!--引入头部-->
+  <header class="header">
+    <div class="header-top">
+        <div class="header-top-child">
+            <div class="htc-left">您好，欢迎来到呼和浩特市采购电子交易平台,请
+                <button>登录</button>
+            </div>
+            <div class="htc-right">
+                <span class="hcr-order iconfont icon-dingdan">订单管理(5)</span>
+                <span class="hcr-sys iconfont icon-shezhi">系统设置</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-middle">
+        <div class="header-middle-box boxwidth">
+            <div class='hmb-logo'>
+                <img src="../img/logo.png" alt="logo"/>
+            </div>
+            <div class="hmb-search">
+                <input type="text" name="searchname" placeholder="输入品牌、商品名称..."/>
+                <button><img src="../img/search-btn.png"/></button>
+            </div>
+            <div class="hmb-cart">
+                <a href="buy.html" target="_blank">
+				<span class="hmb-cart-tips iconfont icon-qipao">
+					<i>66</i>
+				</span>
+                    <span class="hmb-cart-icon iconfont icon-gouwuche"></span>
+                    <span>我的购物车&nbsp;></span>
+                    <span class="redBall" style="display:none"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="nav" style="position: relative;">
+
+    <div class="nav-box boxwidth">
+        <div class="classify iconfont icon-type" style="position: relative;">
+            全部商品分类
+            <div class="catalog">
+
+                <div id="catalogs" style="overflow: hidden;background: #0c1431;height: 484px;">
+                    <script id="catalogs-template" type="text/x-handlebars-template">
+                        <!--	<div class="lbf-third-catalog mCustomScrollbar" id="third-catalog-name" >
+                                {{#each purchasecatalog}}
+                                    <div class="pardiv">
+                                       {{#each secondCatalog}}
+                                        <ul>
+                                      {{#each threeCatalog}}
+                                              <li><a href="product.html?catalogCode={{threeSystemCatalogCode}}&status=byPurchaseCatalog&cataname={{threePurchaseCatalogName}}"> {{threePurchaseCatalogName}}</a></li>
+                                          {{/each}}
+                                        </ul>
+
+                                   {{/each}}
+                                  </div>
+                                {{/each}}
+                            </div>-->
+                        <div class="lbf-child-catalog mCustomScrollbar" id="child-catalog-name">
+
+                            {{#each purchasecatalog}}
+                            <ul>
+                                {{#each secondCatalog}}
+                                <li><a class="hrefurl" href="javascript:;" onclick="getparm(this)"
+                                       data-posturl="product.html"
+                                       data-parm="{'status':'byPurchaseCatalog','cataname':'{{secondPurchaseCatalogName}}','catalogcode':'{{secondSystemCatalogCode}}'}">{{secondPurchaseCatalogName}}</a>
+                                </li>
+                                {{/each}}
+                            </ul>
+                            {{/each}}
+
+                        </div>
+                        <div class='left-bar'>
+                            <div class="left-bar-firstlist">
+                                <ul id="catalog-list">
+
+                                    {{#each purchasecatalog}}
+                                    <li class="icon{{handindex @index}}  catalog-li">
+                                        <i></i>
+                                        <span>{{purchaseCatalogName}}</span>
+
+                                    </li>
+                                    {{/each}}
+
+                                </ul>
+                            </div>
+                        </div>
+                    </script>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="nav-list">
+            <ul>
+                <li>
+                    <a href="./index.html">首页</a>
+                </li>
+                <li>
+                    <a href="./program.html">采购计划</a>
+                </li>
+                <li>
+                    <a href="./order.html">订单管理</a>
+                </li>
+                <li>
+                    <a href="./decision.html">决策支持</a>
+                </li>
+                <li>
+                    <a href="./notice.html">监管公告</a>
+                </li>
+                <li class="retailers">
+                    <a>中标电商</a>
+                    <ul>
+                        <li><a href="javascript:;" onclick="getparm(this)" data-posturl="product.html"
+                               data-parm="{'goodssource':'1','status':'byGoodsName','sourcename':'京东'}">京东</a></li>
+                        <li><a href="javascript:;" onclick="getparm(this)" data-posturl="product.html"
+                               data-parm="{'goodssource':'2','status':'byGoodsName','sourcename':'苏宁'}">苏宁</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 目录 -->
+
+
+</div>
+  <div class="container">
+    <div class="main">
+      <div class="affix">
+        <ul class="order-list">
+          <li class="order-center">
+            订单中心
+          </li>
+          <li class="active">
+            <a style="color: #028FF4;font-weight: 600" href="order.html">我的订单</a>
+          </li>
+          <li>
+            <a href="comment.html">订单评价</a>
+          </li>
+        </ul>
+      </div>
+      <div class="order-container">
+        <div id="my-order" class="box active">
+          <div class="my-order">我的订单</div>
+          <div class="my-order-box">
+            <div class="order-box">
+              <!--<span>我的订单</span>-->
+              <input id="search" class="search" type="text" placeholder="商品名称/订单号/计划单号"/>
+              <i class="iconfont icon-sousuo"></i>
+            </div>
+            <div class="details-container">
+              <table class="details-box">
+                <thead>
+                  <tr>
+                    <th width="602px">订单详情</th>
+                    <th width="142px">收货人</th>
+                    <th width="142px">金额</th>
+                    <th width="142px" class="all-status">全部状态<i class="iconfont icon-arrow"></i>
+                      <ul class="order-status-list">
+                        <li class="order-status-item">提交订单</li>
+                        <li class="order-status-item">确认订单</li>
+                        <li class="order-status-item">商品出货</li>
+                        <li class="order-status-item">商品收货</li>
+                        <li class="order-status-item">订单完成</li>
+                      </ul>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="order-detail-list"></tbody>
+
+                <script id="order-list" type="text/x-handlebars-template">
+                {{#each data.list}}
+                <tr>
+                <td class="blank" colspan="4"></td>
+                </tr>
+                <tr>
+                <td class="tbody-top" colspan="4">
+                <span>{{createDate}}</span>
+                <em>电商订单号:<span class="orderNo">{{orderNo}}</span></em>
+                <em>计划单号:<span class="programCode">{{programCode}}</span></em>
+                <span class="order-type">
+                  {{#eq orderType 1}}
+                  京东官方自营旗舰店
+                  {{else}}
+                  苏宁官方自营旗舰店
+                  {{/eq}}
+                </span>
+                </td>
+                </tr>
+                <tr>
+                <td class="goods-item-box item">
+                {{#each orderitemList}}
+                <div class="goods-item">
+                <div class="goods-img fl">
+                  <span>
+                    <img src="{{goodsPicture}}" alt=""/>
+                  </span>
+                </div>
+                <div class="goods-msg fl">{{goodsName}}</div>
+                </div>
+                <div class="goods-number">
+                <p><em>x</em>{{cartNum}}</p>
+                </div>
+                <div class="goods-price">
+                  <p><em>￥</em>{{discountPrice}}</p>
+                  <p style="text-decoration: line-through"><em>￥</em>{{goodsPrice}}</p>
+                </div>
+                {{/each}}
+                </td>
+                <td class="item">
+                <div class="username">
+                <span>{{receiver}}&nbsp;<i class="iconfont icon-user"></i></span>
+                </div>
+                </td>
+                <td class="item">
+                <div class="amount">
+                <span class="total-money">总金额￥{{totalPrice}}</span><br>
+                <span class="pay">
+                {{#eq payWay 1}}
+                  货到付款
+                {{else}}
+                 账期支付
+                {{/eq}}
+                </span>
+                </div>
+                </td>
+                <td class="item">
+                <div class="status">
+                <span class="finish">
+                  {{#eq orderStatus 0}}
+                  提交订单
+                  {{/eq}}
+                  {{#eq orderStatus 1}}
+			            订单确认
+			            {{/eq}}
+                  {{#eq orderStatus 2}}
+                  商品出货
+                  {{/eq}}
+                  {{#eq orderStatus 3}}
+			            等待收货
+			            {{/eq}}
+                  {{#eq orderStatus 4}}
+			            已完成
+			            {{/eq}}
+                </span><br>
+                <span class="details"><a href="javascript:;" onclick="getparm(this)" data-posturl="order-detail.html" data-parm="{'id':'{{id}}'}">订单详情</a></span>
+                </div>
+                </td>
+                </tr>
+                {{/each}}
+                </script>
+              </table>
+
+              <div class="sorry">
+                <p>sorry</p>
+                <p>没有符合条件的订单</p>
+                <p><a href="index.html">返回首页</a></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!--分页-->
+        <ul class="paginorange" style="margin-top: 0px;"></ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <p>
+        <a href="javascript:;">版权所有：内蒙古大数据&nbsp;&nbsp;&nbsp;技术支持：九次方大数据</a>
+    </p>
+    <p>
+        @copy right by JUSFOUN.com
+    </p>
+</div>
+<script>
+
+    var baseUrl = 'http://192.168.20.119:60030/';
+
+</script>
+<script src="../js/common/jquery.js"></script>
+<script src="../js/common/layer.js"></script>
+<script src="../js/common/jquery.lazyload.js"></script>
+<script src="../js/common/handlebars.min.js"></script> 
+<script src="../js/common/mCustomScrollbar.js"></script>
+<script src="../js/common/public.js"></script>
+  <script src="../js/order.js"></script>
+</body>
+</html>

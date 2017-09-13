@@ -1,0 +1,152 @@
+.announcements-con {
+    width: 890px;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #D6D6D6;
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+}
+
+.announcements-tit {
+    height: 30px;
+    display: table;
+    border-bottom: 1px solid #9CCCF1;
+    margin-bottom: 30px;
+    padding-left: 30px;
+}
+
+.announcements-tit div {
+    margin-right: 20px;
+}
+
+.announcements-tit .title {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    margin-right: 259px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #008AF7;
+}
+
+.announcements-tit .announcements-logo {
+    position: absolute;
+    top: 2px;
+    left: -30px;
+    width: 23px;
+    height: 18px;
+    background: url("../../img/announcements-logo.png");
+}
+.announcements-tit .search-box{
+    position: relative;
+}
+.announcements-tit input {
+    border: none;
+    outline: none;
+    width: 326px;
+    height: 23px;
+    vertical-align: middle;
+    border: 1px solid #D6D6D6;
+    font-size: 12px;
+    padding-left: 13px;
+}
+.announcements-tit .search {
+    color: #008AF9;
+    position: absolute;
+    top:5px;
+    right: 10px;
+    cursor: pointer;
+}
+.announcements-tit button{
+    border: 0 none;
+    outline: none;
+    width: 53px;
+    height: 25px;
+    cursor: pointer;
+}
+.announcements-tit .add{
+    border: 1px solid #D6ECFE;
+    font-weight: 700;
+    color: #008AF7;
+    background: #F6FBFF;
+    margin-right: 20px;
+}
+.announcements-tit .del{
+    border: 1px solid #FEECD6;
+    font-weight: 700;
+    color: #FA8B00;
+    background: #FFFBF5;
+}
+.notice-top {
+    height: 40px;
+    color: #666666;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.notice-box {
+    width: 100%;
+    border: 1px solid #D6D6D6;
+    margin-bottom: 15px;
+}
+
+.notice-box thead th {
+    height: 40px;
+    background: #EFEFEF;
+    border-bottom: 1px solid #D6D6D6;
+}
+
+.notice-box tbody td {
+    height: 45px;
+    border-bottom: 1px solid #D6D6D6;
+    text-align: center;
+    color: #666666;
+    vertical-align: middle;
+    position: relative;
+}
+
+.notice-box tbody td:first-child,
+.notice-box thead th:first-child {
+    text-align: left;
+    padding-left: 40px;
+
+}
+
+.checkbox {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    outline: none;
+    left: 10px;
+    margin-top:1px;
+}
+
+.piece {
+    color: #666666;
+}
+
+.piece .piece-number {
+    color: #0391F2;
+    font-weight: 700;
+}
+/*公告文章*/
+.nav-top {
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+.nav-top a {
+    color: #666666;
+}
+
+.essay-box {
+    width: 100%;
+    border: 1px solid #D6D6D6;
+    padding: 35px;
+    box-sizing: border-box;
+}
+/*分页*/
+ul.paginorange{
+    margin-top:-21px;
+    padding: 0;
+}

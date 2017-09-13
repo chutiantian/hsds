@@ -1,0 +1,10 @@
+{
+    "msg": "调用成功",
+    "code": "1",
+    "ebOmDeliveraddress": [
+        {
+            "regionCode": "3373",
+            "regionName": "玄武区"
+        }
+    ]
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="keywords" content=""/>
+  <meta name="description" content=""/>
+  <meta name="author" content="author,email address"/>
+  <meta name="robots" content="index,follow"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="renderer" content="ie-stand"/>
+  <title>监管公告</title>
+  <link rel="stylesheet" href="../css/less/common/reset.css"/>
+  <link rel="stylesheet" href="../css/less/common/mCustomScrollbar.min.css"/>
+  <link rel="stylesheet" href="../css/less/common/iconfont.css"/>
+  <link rel="stylesheet" href="../css/less/common/header.css"/>
+  <link rel="stylesheet" href="../css/less/common/page.css"/>
+  <link rel="stylesheet" href="../css/less/notice.css"/>
+</head>
+<body>
+  <!--引入头部-->
+  <header class="header">
+    <div class="header-top">
+        <div class="header-top-child">
+            <div class="htc-left">您好，欢迎来到呼和浩特市采购电子交易平台,请
+                <button>登录</button>
+            </div>
+            <div class="htc-right">
+                <span class="hcr-order iconfont icon-dingdan">订单管理(5)</span>
+                <span class="hcr-sys iconfont icon-shezhi">系统设置</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-middle">
+        <div class="header-middle-box boxwidth">
+            <div class='hmb-logo'>
+                <img src="../img/logo.png" alt="logo"/>
+            </div>
+            <div class="hmb-search">
+                <input type="text" name="searchname" placeholder="输入品牌、商品名称..."/>
+                <button><img src="../img/search-btn.png"/></button>
+            </div>
+            <div class="hmb-cart">
+                <a href="buy.html" target="_blank">
+				<span class="hmb-cart-tips iconfont icon-qipao">
+					<i>66</i>
+				</span>
+                    <span class="hmb-cart-icon iconfont icon-gouwuche"></span>
+                    <span>我的购物车&nbsp;></span>
+                    <span class="redBall" style="display:none"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="nav" style="position: relative;">
+
+    <div class="nav-box boxwidth">
+        <div class="classify iconfont icon-type" style="position: relative;">
+            全部商品分类
+            <div class="catalog">
+
+                <div id="catalogs" style="overflow: hidden;background: #0c1431;height: 484px;">
+                    <script id="catalogs-template" type="text/x-handlebars-template">
+                        <!--	<div class="lbf-third-catalog mCustomScrollbar" id="third-catalog-name" >
+                                {{#each purchasecatalog}}
+                                    <div class="pardiv">
+                                       {{#each secondCatalog}}
+                                        <ul>
+                                      {{#each threeCatalog}}
+                                              <li><a href="product.html?catalogCode={{threeSystemCatalogCode}}&status=byPurchaseCatalog&cataname={{threePurchaseCatalogName}}"> {{threePurchaseCatalogName}}</a></li>
+                                          {{/each}}
+                                        </ul>
+
+                                   {{/each}}
+                                  </div>
+                                {{/each}}
+                            </div>-->
+                        <div class="lbf-child-catalog mCustomScrollbar" id="child-catalog-name">
+
+                            {{#each purchasecatalog}}
+                            <ul>
+                                {{#each secondCatalog}}
+                                <li><a class="hrefurl" href="javascript:;" onclick="getparm(this)"
+                                       data-posturl="product.html"
+                                       data-parm="{'status':'byPurchaseCatalog','cataname':'{{secondPurchaseCatalogName}}','catalogcode':'{{secondSystemCatalogCode}}'}">{{secondPurchaseCatalogName}}</a>
+                                </li>
+                                {{/each}}
+                            </ul>
+                            {{/each}}
+
+                        </div>
+                        <div class='left-bar'>
+                            <div class="left-bar-firstlist">
+                                <ul id="catalog-list">
+
+                                    {{#each purchasecatalog}}
+                                    <li class="icon{{handindex @index}}  catalog-li">
+                                        <i></i>
+                                        <span>{{purchaseCatalogName}}</span>
+
+                                    </li>
+                                    {{/each}}
+
+                                </ul>
+                            </div>
+                        </div>
+                    </script>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="nav-list">
+            <ul>
+                <li>
+                    <a href="./index.html">首页</a>
+                </li>
+                <li>
+                    <a href="./program.html">采购计划</a>
+                </li>
+                <li>
+                    <a href="./order.html">订单管理</a>
+                </li>
+                <li>
+                    <a href="./decision.html">决策支持</a>
+                </li>
+                <li>
+                    <a href="./notice.html">监管公告</a>
+                </li>
+                <li class="retailers">
+                    <a>中标电商</a>
+                    <ul>
+                        <li><a href="javascript:;" onclick="getparm(this)" data-posturl="product.html"
+                               data-parm="{'goodssource':'1','status':'byGoodsName','sourcename':'京东'}">京东</a></li>
+                        <li><a href="javascript:;" onclick="getparm(this)" data-posturl="product.html"
+                               data-parm="{'goodssource':'2','status':'byGoodsName','sourcename':'苏宁'}">苏宁</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 目录 -->
+
+
+</div>
+  <div class="container" id="notice-box">
+
+  </div>
+
+  <script id="notice-list" type="text/x-handlebars-template">
+
+    <div class="notice-top">监管公告</div>
+    <table class="notice-box">
+      <thead>
+      <tr>
+        <th>公告名称</th>
+        <th>颁布机构</th>
+        <th>颁布时间</th>
+      </tr>
+      </thead>
+      <tbody>
+      {{#each page.list}}
+      <tr>
+        <td style="width:700px;box-sizing:border-box">
+          <a style="width:700px;height:14px;overflow:hidden;display:inline-block;text-overflow:ellipsis;white-space:nowrap" class="notice-title" href="javascript:;" onclick="getparm(this)" data-posturl="notice-essay.html" data-parm="{'id':'{{id}}'}">{{infoTitle}}</a>
+        </td>
+        <td style="width:300px;box-sizing:border-box">
+          <span style="width:300px;height:14px;overflow:hidden;display:inline-block;text-overflow:ellipsis;white-space:nowrap">
+            {{infoOrg}}
+          </span>
+        </td>
+        <td style="width:168px">{{publlishTime}}</td>
+      </tr>
+      {{/each}}
+      </tbody>
+    </table>
+    <div class="piece">
+      <span class="piece-left">共&nbsp;<span class="piece-number">{{page.totalCount}}</span>&nbsp;篇</span>
+      <!--分页-->
+      <ul class="paginorange" style="margin-top: 0px;"></ul>
+    </div>
+  </script>
+  <div class="footer">
+    <p>
+        <a href="javascript:;">版权所有：内蒙古大数据&nbsp;&nbsp;&nbsp;技术支持：九次方大数据</a>
+    </p>
+    <p>
+        @copy right by JUSFOUN.com
+    </p>
+</div>
+<script>
+
+    var baseUrl = 'http://192.168.20.119:60030/';
+
+</script>
+<script src="../js/common/jquery.js"></script>
+<script src="../js/common/layer.js"></script>
+<script src="../js/common/jquery.lazyload.js"></script>
+<script src="../js/common/handlebars.min.js"></script> 
+<script src="../js/common/mCustomScrollbar.js"></script>
+<script src="../js/common/public.js"></script>
+  <script src="../js/common/jquery.myPagination.js"></script>  
+  <script src="../js/notice.js"></script>
+</body>
+</html>

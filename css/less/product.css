@@ -1,0 +1,585 @@
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    color: #666666;
+    font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+}
+
+.breadcrumb {
+    height: 42px;
+    line-height: 42px;
+}
+
+.breadcrumb a {
+    color: #666;
+}
+
+table {
+    height: 150px;
+    border: 1px solid #D6D6D6;
+    box-sizing: border-box;
+}
+
+table td {
+    border: 1px solid #D6D6D6;
+}
+
+.price, .brand, .else {
+    width: 115px;
+    line-height: 50px;
+    text-align: center;
+    background: #F7F7F7;
+}
+
+.select {
+    width: 1105px;
+}
+
+.price-list .price-item {
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    margin-left: 25px;
+    color: #008FF8;
+}
+
+/*.brand-list .brand-item {*/
+/*height: 25px;*/
+/*line-height: 25px;*/
+/*}*/
+.price-item .icon-close, .brand-item .icon-close {
+    display: none;
+    margin-left: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.unlimited {
+    display: inline-block;
+    color: #F88000;
+    margin-left: 25px;
+}
+
+.all {
+    display: inline-block;
+    color: #F88000;
+}
+
+.symbol {
+    color: #D6D6D6;
+}
+
+.btn {
+    width: 60px;
+    height: 27px;
+    line-height: 27px;
+    background: #0088EF;
+    outline: none;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.text {
+    margin-left: 25px;
+}
+
+.text span {
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.text span input {
+    width: 80px;
+    height: 25px;
+    border: 1px solid #D6D6D6;
+    text-align: center;
+    color: #666666;
+}
+
+span.more {
+    /*float:right;*/
+    display: none;
+    width: 60px;
+    height: 24px;
+    line-height: 35px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btn-more {
+    display: inline-block;
+    width: 62px;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #D6D6D6;
+    outline: none;
+    background: transparent;
+    color: #666666;
+    cursor: pointer;
+}
+
+.btn-more i {
+    font-size: 14px;
+    float: right;
+}
+
+.input-msg input {
+    width: 400px;
+    height: 27px;
+    margin-left: 25px;
+    padding-left: 15px;
+    border: 1px solid #D6D6D6;
+    color: #666666;
+}
+
+.input-msg .icon-sousuo {
+    position: relative;
+    left: -30px;
+    color: #269BF4;
+    top: 2px;
+    cursor: pointer;
+    top: 8px \9;
+}
+
+.input-msg .input-val {
+    display: inline-block;
+    height: 22px;
+    line-height: 22px;
+    background: #0090F9;
+    color: #fff;
+    margin-left: 25px;
+    vertical-align: middle;
+
+}
+
+.input-msg .icon-close {
+    display: none;
+    cursor: pointer;
+    vertical-align: middle;
+    font-size: 18px;
+}
+
+.comparison-click {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+
+}
+
+.comparison-click * {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 25px;
+    cursor: pointer;
+}
+
+.price-list {
+    display: inline-block;
+}
+
+.price-list .price-item:hover,
+.brand-list .brand-item:hover,
+.hide-list .hide-item:hover {
+    color: #F88000;
+    cursor: pointer;
+}
+
+.product-top {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    height: 40px;
+    background: #EFEFEF;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+.product-top-left {
+    float: left;
+}
+
+.product-top-left button {
+    float: left;
+    width: 62px;
+    height: 24px;
+    line-height: 19px;
+
+    text-align: center;
+    border: 1px solid #D6D6D6;
+    margin-right: 20px;
+    margin-top: 7px;
+    background: #fff;
+    outline: none;
+    color: #666666;
+    cursor: pointer;
+}
+
+.product-top-left button i {
+    display: inline-block;
+    font-size: 10px;
+}
+
+.product-top-right {
+    float: right;
+    line-height: 40px;
+    margin-top: -54px;
+    margin-right: 10px;
+}
+
+.number {
+    color: #008DF5;
+    margin: 0 10px 0 10px;
+}
+
+.product-bottom {
+    float: left;
+    margin-bottom: 10px;
+}
+
+.product-list {
+    width: 1215px;
+    overflow: hidden;
+}
+
+.product-bottom .product-list .product-item {
+    float: left;
+    width: 228px;
+    height: 320px;
+    border: 1px solid #D6D6D6;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.product-bottom .product-list .product-item:hover {
+    border: 1px solid #0088EF;
+    box-shadow: 0 0 5px #0088EF;
+}
+
+.product-top-left .active {
+    border: 1px solid #F88000;
+    color: #F88000;
+}
+
+.product-bottom .product-list .product-item:hover a, .product-bottom .product-list .product-item:hover .prodect-describe {
+    text-decoration: underline;
+    color: #158DF4 !important;
+}
+
+/*商品详情*/
+.product-item .product-img {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.product-item .product-details {
+    margin: 20px 16px;
+}
+
+.product-details .actual-price {
+    display: inline-block;
+    text-align: left;
+    width: 60px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #E4393C;
+}
+
+.product-details .store-price {
+    display: inline-block;
+    width: 125px;
+    text-align: right;
+    color: #999999;
+    text-decoration: line-through;
+}
+
+.product-details .prodect-describe {
+    overflow: hidden;
+    width: 100%;
+    height: 35px;
+    line-height: 18px;
+    color: #666666;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+.product-details .sell {
+    display: inline-block;
+    text-align: left;
+    width: 85px;
+    color: #999999;
+    margin-bottom: 15px;
+}
+
+.product-details .jd-img {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+
+.copy-paper {
+    color: #F88000;
+}
+
+.goods-icon {
+    float: right;
+}
+
+.contrast {
+    vertical-align: middle;
+    outline: none;
+}
+
+.check label {
+    vertical-align: middle;
+}
+
+/*分页*/
+.page-box {
+    height: 40px;
+    text-align: right;
+    margin-bottom: 25px;
+}
+
+.page-box .news_content {
+    display: inline-block;
+}
+
+.page-number {
+    color: #0088EF;
+}
+
+.justify {
+    text-align: justify;
+    text-justify: distribute-all-lines;
+    /*text-align-last: justify;*/
+    -moz-text-align-last: justify;
+    -webkit-text-align-last: justify;
+}
+
+.select-left {
+    width: 90%;
+    width: calc(100% - 100px);
+    margin-left: 25px;
+    text-align: left;
+    text-align-last: left;
+}
+
+.select-left, .more {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.brand-list {
+    width: 90%;
+    width: calc(100% - 60px);
+    height: 30px;
+    overflow: hidden;
+    /*overflow-y:auto;*/
+}
+
+.brand-list .brand-item {
+    display: inline-block;
+    line-height: 20px;
+    margin-left: 25px;
+    color: #008FF8;
+}
+
+.all, .brand-list {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 3;
+}
+.all.active,.unlimited.active{
+	background: rgb(5, 146, 241);
+    color: rgb(255, 255, 255);
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 25px !important;
+    vertical-align: middle;
+}
+.all.active{
+	margin-top: 5px;
+}
+
+/*对比模块*/
+.contrast-container {
+    position: fixed;
+    bottom: 0;
+    width: 1200px;
+    height: 187px;
+    z-index: 9;
+    display: none;
+}
+
+.contrast-box {
+    height: 155px;
+    background: #fff;
+    border: 1px solid #0A93F0;
+}
+
+.contrast-head {
+    width: 120px;
+    height: 32px;
+    line-height: 32px;
+    background: url('../../img/blue.png') no-repeat 0 0;
+    color: #fff;
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+.contrast-product {
+    position: relative;
+    float: left;
+    width: 262px;
+    height: 120px;
+    line-height: 120px;
+    border-right: 1px solid #ACC8DD;
+    margin: 15px 0;
+}
+
+.contrast-img {
+    float: left;
+    clear: both;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    border: 1px solid #D6D6D6;
+    margin-left: 20px;
+    margin-top: 40px;
+    font-size: 20px;
+    color: #D6D6D6;
+}
+
+.contrast-detail {
+    float: left;
+    margin-left: 30px;
+    color: #D0D0D0;
+}
+
+.btn-box {
+    float: left;
+    margin-left: 45px;
+    margin-top: 50px;
+}
+
+.btn-contrast {
+    width: 60px;
+    height: 25px;
+    line-height: 25px;
+    background: #FA8C00;
+    color: #fff;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.btn-clear {
+    width: 60px;
+    height: 25px;
+    line-height: 25px;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    color: #0391F2;
+}
+
+.close .btn-close {
+    background: transparent;
+    outline: none;
+    border: 0;
+    color: #0391F2;
+    font-size: 18px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+/*分页*/
+div.page_diy {
+    background: #fcfcfc;
+}
+
+div.page_diy span.disabled {
+    margin: 0px 4px;
+    padding: 6px 15px;
+    color: #ccc;
+    border: 1px solid #ccc;
+}
+
+div.page_diy span.current {
+    font-weight: bold;
+    padding: 6px 15px;
+    color: #ff6c16;
+    border: #ff5a00 2px solid;
+}
+
+/*商品来源图标*/
+.goods-src-1 {
+    position: absolute;
+    width: 44px;
+    height: 16px;
+    line-height: 16px;
+    background: url('../../img/jd.png') no-repeat 0 0;
+    right: 103px;
+    bottom: 14px;
+}
+
+.goods-src-2 {
+    position: absolute;
+    width: 56px;
+    height: 18px;
+    line-height: 18px;
+    background: url('../../img/sn.png') no-repeat right 0;
+    right: 103px;
+    bottom: 14px;
+}
+
+/*底部对比栏动态DOM样式*/
+.contrast-product .pic {
+    line-height: 0;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+.contrast-product .goods-des {
+    width: 140px;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.contrast-product .goods-price {
+    font-size: 14px;
+    font-weight: 700;
+    color: #E5393C;
+
+}
+
+.contrast-product p {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.contrast-product a {
+    position: absolute;
+    right: 22px;
+    bottom: 14px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #4FA1DE;
+    text-decoration: underline;
+}
+
+.goods-summary {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    height: 40px;
+    overflow: hidden;
+}

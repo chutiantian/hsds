@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <title>商品对比</title>
+    <link type="text/css" href="../css/less/common/reset.css" rel="stylesheet" />
+    <link type="text/css" href="../css/less/common/iconfont.css" rel="stylesheet" />
+    <link type="text/css" href="../css/less/common/header.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/less/comparison.css" />
+</head>
+
+<body>
+    <header class="header">
+    <div class="header-top">
+        <div class="header-top-child">
+            <div class="htc-left">您好，欢迎来到呼和浩特市采购电子交易平台,请
+                <button>登录</button>
+            </div>
+            <div class="htc-right">
+                <span class="hcr-order iconfont icon-dingdan">订单管理(5)</span>
+                <span class="hcr-sys iconfont icon-shezhi">系统设置</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-middle">
+        <div class="header-middle-box boxwidth">
+            <div class='hmb-logo'>
+                <img src="../img/logo.png" alt="logo"/>
+            </div>
+            <div class="hmb-search">
+                <input type="text" name="searchname" placeholder="输入品牌、商品名称..."/>
+                <button><img src="../img/search-btn.png"/></button>
+            </div>
+            <div class="hmb-cart">
+                <a href="buy.html" target="_blank">
+				<span class="hmb-cart-tips iconfont icon-qipao">
+					<i>66</i>
+				</span>
+                    <span class="hmb-cart-icon iconfont icon-gouwuche"></span>
+                    <span>我的购物车&nbsp;></span>
+                    <span class="redBall" style="display:none"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="nav" style="position: relative;">
+
+    <div class="nav-box boxwidth">
+        <div class="classify iconfont icon-type" style="position: relative;">
+            全部商品分类
+            <div class="catalog">
+
+                <div id="catalogs" style="overflow: hidden;background: #0c1431;height: 484px;">
+                    <script id="catalogs-template" type="text/x-handlebars-template">
+                        <!--	<div class="lbf-third-catalog mCustomScrollbar" id="third-catalog-name" >
+                                {{#each purchasecatalog}}
+                                    <div class="pardiv">
+                                       {{#each secondCatalog}}
+                                        <ul>
+                                      {{#each threeCatalog}}
+                                              <li><a href="product.html?catalogCode={{threeSystemCatalogCode}}&status=byPurchaseCatalog&cataname={{threePurchaseCatalogName}}"> {{threePurchaseCatalogName}}</a></li>
+                                          {{/each}}
+                                        </ul>
+
+                                   {{/each}}
+                                  </div>
+                                {{/each}}
+                            </div>-->
+                        <div class="lbf-child-catalog mCustomScrollbar" id="child-catalog-name">
+
+                            {{#each purchasecatalog}}
+                            <ul>
+                                {{#each secondCatalog}}
+                                <li><a class="hrefurl" href="javascript:;" onclick="getparm(this)"
+                                       data-posturl="product.html"
+                                       data-parm="{'status':'byPurchaseCatalog','cataname':'{{secondPurchaseCatalogName}}','catalogcode':'{{secondSystemCatalogCode}}'}">{{secondPurchaseCatalogName}}</a>
+                                </li>
+                                {{/each}}
+                            </ul>
+                            {{/each}}
+
+                        </div>
+                        <div class='left-bar'>
+                            <div class="left-bar-firstlist">
+                                <ul id="catalog-list">
+
+                                    {{#each purchasecatalog}}
+                                    <li class="icon{{handindex @index}}  catalog-li">
+                                        <i></i>
+                                        <span>{{purchaseCatalogName}}</span>
+
+                                    </li>
+                                    {{/each}}
+
+                                </ul>
+                            </div>
+                        </div>
+                    </script>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="nav-list">
+            <ul>
+                <li>
+                    <a href="./index.html">首页</a>
+                </li>
+                <li>
+                    <a href="./program.html">采购计划</a>
+                </li>
+                <li>
+                    <a href="./order.html">订单管理</a>
+                </li>
+                <li>
+                    <a href="./decision.html">决策支持</a>
+                </li>
+                <li>
+                    <a href="./notice.html">监管公告</a>
+                </li>
+                <li class="retailers">
+                    <a>中标电商</a>
+                    <ul>
+                        <li><a href="javascript:;" onclick="getparm(this)" data-posturl="product.html"
+                               data-parm="{'goodssource':'1','status':'byGoodsName','sourcename':'京东'}">京东</a></li>
+                        <li><a href="javascript:;" onclick="getparm(this)" data-posturl="product.html"
+                               data-parm="{'goodssource':'2','status':'byGoodsName','sourcename':'苏宁'}">苏宁</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 目录 -->
+
+
+</div>
+    <div class="goods-comparison">
+        <div class="breadcrumb">
+        </div>
+        <div class="comparison-con">
+            <!--<h2 class="tc">商品对比</h2>-->
+            <!--<table>-->
+            <!--<thead>-->
+            <!--<tr>-->
+            <!--<th>选择</th>-->
+            <!--<th>商品名称</th>-->
+            <!--<th>价格</th>-->
+            <!--<th>供应商</th>-->
+            <!--<th>评价</th>-->
+            <!--<th>其他</th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody>-->
+            <!--<tr>-->
+            <!--<td class="floor-price">-->
+            <!--<input type="radio" name="pro" value="1">选择-->
+            <!--<span class="floor-price-bg"></span>-->
+            <!--</td>-->
+            <!--<td class="product-name">-->
+            <!--<p> 惠普 （HP）LaserJet Q2612A黑色惠普 （HP）LaserJet Q2612A黑色</p>-->
+            <!--</td>-->
+            <!--<td class="product-price">-->
+            <!--<span class="goods-price"><em>￥</em>152.00</span>-->
+            <!--</td>-->
+            <!--<td class="product-provider">-->
+            <!--京东-->
+            <!--</td>-->
+            <!--<td class="product-comment">-->
+            <!--98%-->
+            <!--</td>-->
+            <!--<td class="product-other">-->
+            <!--&lt;!&ndash;<dl class="clearfix">&ndash;&gt;-->
+            <!--&lt;!&ndash;<dt class="fl">颜色</dt>&ndash;&gt;-->
+            <!--&lt;!&ndash;<dd class="fl">黑色</dd>&ndash;&gt;-->
+            <!--&lt;!&ndash;</dl>&ndash;&gt;-->
+            <!--&lt;!&ndash;<dl class="clearfix">&ndash;&gt;-->
+            <!--&lt;!&ndash;<dt class="fl">适用机型适</dt>&ndash;&gt;-->
+            <!--&lt;!&ndash;<dd class="fl">1108 1106 M2000机型等1108 1106 M2000机型等1108 1106 M2000机型等1108 1106 M2000机型等1108 1106&ndash;&gt;-->
+            <!--&lt;!&ndash;M2000机型等1108 1106 M2000机型等1108 1106 M2000机型等1108 1106 M2000机型等1108 1106 M2000机型等1108 1106&ndash;&gt;-->
+            <!--&lt;!&ndash;M2000机型等&ndash;&gt;-->
+            <!--&lt;!&ndash;</dd>&ndash;&gt;-->
+            <!--&lt;!&ndash;</dl>&ndash;&gt;-->
+            <!--</td>-->
+            <!--</tr>-->
+            <!--</tbody>-->
+            <!--</table>-->
+        </div>
+        <div class="join-cart">
+            <!--<div class="join-product clearfix">-->
+            <!--<img src="../img/join-cart.png" width='72' height='59' alt="">-->
+            <!--<div class="join-cart-dec fl">-->
+            <!--<p class="dec-tit">得力（deli）7360 珊瑚海70gA4复印纸 8包/箱 </p>-->
+            <!--<p class="dec-warn">-->
+            <!--重要提示】得力好具满减，助力职场启航，你离职场精英，可能只差一套得你离职场精英，可能只差一套得英，可能只差一套得你离职场精英，可能只差一套得英，可能只差一套得你离职场精英，可能只差一套得</p>-->
+            <!--</div>-->
+            <!--<span class="goods-price join-cart-price"><em>￥</em>15245.00</span>-->
+            <!--<button class="join-btn fr">加入购物车</button>-->
+            <!--<span class="goods-src-jd"></span>-->
+        </div>
+    </div>
+    </div>
+    <div class="footer">
+    <p>
+        <a href="javascript:;">版权所有：内蒙古大数据&nbsp;&nbsp;&nbsp;技术支持：九次方大数据</a>
+    </p>
+    <p>
+        @copy right by JUSFOUN.com
+    </p>
+</div>
+<script>
+
+    var baseUrl = 'http://192.168.20.119:60030/';
+
+</script>
+<script src="../js/common/jquery.js"></script>
+<script src="../js/common/layer.js"></script>
+<script src="../js/common/jquery.lazyload.js"></script>
+<script src="../js/common/handlebars.min.js"></script> 
+<script src="../js/common/mCustomScrollbar.js"></script>
+<script src="../js/common/public.js"></script>
+    <!--订单详情弹窗-->
+    <div class="comparison-mask">
+    </div>
+    <div class="comparison-tip">
+        <div class="tip-con">
+            <h2>您确认选择该商品？</h2>
+            <h3>（该商品不是最低价）</h3>
+            <button class="confirm">确定</button>
+            <button class="cancel">取消</button>
+        </div>
+    </div>
+    <script id="breadcrumb-tpl" type="text/x-handlebars-template">
+        <span><a href="index.html">首页</a></span>
+        <span>&nbsp;&gt;&nbsp;</span>
+        <span><a href="./program.html">采购计划</a></span>
+        <span>&nbsp;&gt;&nbsp;</span>
+        <span><a href="javascript:;" class='jump'>{{name}}</a></span>
+        <span>&nbsp;&gt;&nbsp;</span>
+        <span>对比</span>
+    </script>
+    <script id="compare-tpl" type="text/x-handlebars-template">
+        <h2 class="tc">商品对比</h2>
+        <table>
+            <thead>
+                <tr>
+                    {{#if isComeFrom}}
+                    <th>选择</th>
+                    {{/if}}
+                    <th>商品名称</th>
+                    <th>价格</th>
+                    <th>电商</th>
+                    <!--<th>评价</th>-->
+                    <th>其他</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each orderhisList}}
+                <tr index={{@index}}>
+                    {{#if ../isComeFrom}}
+                    <td class="floor-price">
+                        <input type="radio" name='pro' value={{goodsId}} {{isShow @index}} idx="{{@index}}" />选择
+                    </td>
+                    {{/if}}
+                    <td class="product-name">
+                        <p> {{goodsName}}</p>
+                    </td>
+                    <td class="product-price">
+                        <span class="goods-price"><em>￥</em>{{goodsPrice}}</span>
+                        <div class="floor-price-wrap">
+                            <span class="floor-price-{{@index}}"></span>
+                        </div>
+
+                    </td>
+                    <td class="product-provider">
+                        {{transformOrderType goodsSource}}
+                    </td>
+                    <!--<td class="product-comment">-->
+                    <!--</td>-->
+                    <td class="product-other">
+                        {{{goodsDesc}}}
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </script>
+    <script id="join-cart-tpl" type='text/x-handlebars-template'>
+        {{#with data}}
+        <div class="join-product clearfix">
+            <img src={{imagePath}} width='72' height='59' alt="" />
+            <div class="join-cart-dec fl">
+                <p class="dec-tit">{{goodsName}} </p>
+                <!--<p class="dec-warn">{{goodsDesc}}-->
+                <!--</p>-->
+            </div>
+            <span class="goods-price join-cart-price"><em>￥</em>{{goodsPrice}}</span>
+            <button class="join-btn fr">加入购物车</button>
+            <span class="goods-src-{{goodsSource}}"></span>
+        </div>
+        {{/with}}
+    </script>
+    <script src="../js/comparison.js"></script>
+</body>
+
+</html>

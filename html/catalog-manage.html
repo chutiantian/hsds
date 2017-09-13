@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		 <link type="text/css" href="../css/less/common/reset.css" rel="stylesheet"/>
+	    <link type="text/css" href="../css/less/common/iconfont.css" rel="stylesheet"/>
+	    <link type="text/css" href="../css/less/common/header.css" rel="stylesheet"/>
+ 		<link rel="stylesheet" href="../css/less/common/mCustomScrollbar.min.css"/>
+ 		<link rel="stylesheet" href="../css/less/common/zTreeStyle/zTreeStyle.css">
+		<style>
+			.catalog-warp{
+				width: 1020px;
+				margin: 0px auto;
+			}
+			.catalog-warp-left{
+				width: 250px;
+				height: 550px;
+				border:1px solid #ccc;
+				float: left;
+			}
+			.catalog-warp h3{
+				height: 40px;
+				background: #F2F2F2;
+				padding-left: 10px;
+				line-height: 40px;
+				color: #56b3e5;
+				font-size: 16px;
+			}
+			.catalog-warp h3 img{
+				width: 20px;
+			    margin-top: 11px;
+			    margin-right: 10px;
+			}
+			.ztree{
+			    height: 460px;
+				overflow: hidden;
+				padding-left: 45px;
+				padding-top: 20px;
+			}
+		
+			.ztree *{
+				font-size: 16px !important;
+			}
+			/*.ztree li span.button{
+				background-image: url(../img/u21226.png);
+				height: 18px;
+				width: 18px;
+			}*/
+			.ztree li ul li a,.ztree li ul li span.button.switch{
+				height: 26px;
+			}
+			 .ztree li ul{
+			 	padding-top: 10px;
+			 }
+			 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+			    background-color: #504848;
+			    background-color: rgba(87, 77, 77, 0.75);			
+			}
+			 .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar{
+			 	background-color: #504848;
+			    background-color: rgba(87, 77, 77, 0.75);	
+			 }
+			 .catalog-warp-right{
+			 	float: right;
+			 	width: 750px;
+			 	border: 1px solid #ccc;
+			 	text-align: center;
+			 }
+			 .node{
+			 	margin-top: 30px;
+			 }
+			 .node div{
+			 	margin-bottom: 30px;
+			 }
+			 .node div span{
+			 	display: inline-block;
+			 	vertical-align: middle;
+			 	width: 120px;
+			 	text-align: right;
+			 	font-size: 14px;
+			 }
+			  .node div input{
+			  	width: 500px;
+			  	height: 30px;
+			  	line-height: 30px;
+			  	padding-left: 10px;
+			  	margin-left: 10px;
+			  }
+			  .node .jgqj button{
+			  	background: #56b3e5;
+			  	color: #fff;
+			  	width: 80px;
+			  	border: none;
+			  	font-size: 14px;
+			  	outline: none;
+			  	cursor: pointer;
+			  	height: 35px;
+			  }
+			  .text { 
+				    width: 521px;
+				    float: right;
+				    margin-right: 55px;
+				    text-align: left;
+				    margin-top: 10px;
+				    margin-bottom: 10px;
+				}
+		 .text span{
+		 	text-align: left !important;
+		 }
+			span.symbol{
+				width: 20px !important;	
+			}
+			.text span {
+			  
+			    display: inline-block;
+			    vertical-align: middle;
+			}
+			
+			.text span input {
+			    width: 80px;
+			    height: 25px;
+			    border: 1px solid #D6D6D6;
+			    text-align: center;
+			    color: #666666;
+			}
+			span.del{
+				cursor: pointer;
+			}
+			.saveinfo{
+				margin: 30px;
+				  	background: #56b3e5;
+			  	color: #fff;
+			  	width: 100px;
+			  	border: none;
+			  	font-size: 14px;
+			  	outline: none;
+			  	cursor: pointer;
+			  	height: 35px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="catalog-warp">
+			<div class="catalog-warp-left">
+				<h3><img src="/img/u21333.png">分类目录</h3>
+				<ul id="treeDemo" class="ztree mCustomScrollbar"></ul>
+			</div>
+			<div class="catalog-warp-right mCustomScrollbar">
+				<h3><img src="/img/u21333.png">节点信息</h3> 
+				<div class="node">
+					<div><span>父节点:</span><input id="parentnode" disabled="disabled" value="" /></div>
+					<div><span>名称:</span><input id="catlogname" disabled="disabled" value="" /></div>
+					<div><span>编码:</span><input id="catlogcode" disabled="disabled" value="" /></div>
+					<div class="jgqj">
+						<span>价格区间:</span><span style="margin-left:10px;width: 512px; text-align: left;"><button class="add">新增</button></span>
+						<div id="jgqj-cont">						
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<button class="saveinfo">保存</button>
+			</div>
+		</div>
+	<script src="../js/common/jquery.js"></script>
+	<script src="../js/common/layer.js"></script>
+	<script src="../js/common/mCustomScrollbar.js"></script>
+	<script src="/js/common/jquery.ztree.core.min.js"></script>
+<script>
+	var pricearr=[];
+	// ztree配置信息 
+var setting = {
+	data : {
+		simpleData : {
+			enable : true 
+		}
+	},
+	check : {
+		enable : false
+	},
+
+	callback : {
+		onClick : zTreeOnClick
+	}
+};
+var clickNode = null;
+
+function zTreeOnClick(event, treeId, treeNode) {
+	pricearr=[];
+	clickNode=treeNode;
+	var url ="/js/json/tree1.json?id=" + treeNode.id;
+	var id = treeNode.id;
+	$.get(url,null,function(result){
+		if(result){
+			$('#parentnode').val(result.parentName+' >')
+			$('#catlogname').val(result.name)
+			$('#catlogcode').val(result.code);
+			$('.saveinfo').attr('data-itemid',treeNode.id);
+			if(result.catalogprices){
+				var pricelistnum=result.catalogprices.length;
+				var html='';
+				for(var i=0;i<pricelistnum;i++){
+					html+='<p class="text"><span><input type="text" value="'+result.catalogprices[i].upPrice+'" class="upPrice" onkeyup="this.value=this.value.replace(/[^0-9]/g,\'\');"></span><span class="symbol">—</span><span><input value="'+result.catalogprices[i].downPrice+'" type="text" class="downPrice" onkeyup="this.value=this.value.replace(/[^0-9]/g,\'\');"></span><span class="del"><img src="/img/del.jpg" width="25"></span></p>'
+				}
+				 $('#jgqj-cont').html(html);  
+			}
+		}
+	 
+	},'json');/**/
+};
+	$(document).ready(function() {
+		var zNodes=[];
+	$.get("/js/json/tree.json", function(data) {
+		var aaas=data.ebPmPurchasecatalogs;
+		// console.info(data);
+		aaas.forEach(function(item) {
+			zNodes.push({
+				id : item.systemCatalogCode,
+				pId : item.parentCatalogCode,
+				name : item.purchaseCatalogName
+			});
+		});
+		$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+		
+		//加载完树后需要展开一级节点
+		var treeObj = $.fn.zTree.getZTreeObj("treeDemo");
+			treeObj.expandAll(true); 
+	});
+	
+	$('.jgqj').on('click','span.del',function(){
+		$(this).parent('p').remove();
+	})
+	/*新增*/
+	$('.node .jgqj button.add').click(function(){
+		var html='<p class="text"><span><input type="text" class="upPrice" onkeyup="this.value=this.value.replace(/[^0-9]/g,\'\');"></span><span class="symbol">—</span><span><input type="text" class="downPrice" onkeyup="this.value=this.value.replace(/[^0-9]/g,\'\');"></span><span class="del"><img src="/img/del.jpg" width="25"></span></p>'
+        $('#jgqj-cont').append(html);                
+	})
+	$('.saveinfo').click(function(){
+		var itemid=$(this).attr('data-itemid');
+		if(itemid){
+			$('#jgqj-cont p').each(function(ex){
+				console.log($(this))
+				var upprice=$(this).find('.upPrice').val()
+				var downprice=$(this).find('.downPrice').val()
+				if(upprice && downprice){
+					pricearr.push({upPrice:upprice,downPrice:downprice})
+				}
+			})
+			var postdata={id:itemid,list:pricearr}
+			$.post(baseUrl+'pricelogue/catalogue',postdata,function(result){
+				if(result.code==1){
+				 	layer.msg('保存成功');
+				}
+			 
+			},'json');
+		}
+	})
+});
+</script> 
+	</body>
+</html>
+	

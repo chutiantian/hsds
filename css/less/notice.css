@@ -1,0 +1,80 @@
+.container {
+  width: 1200px;
+  margin: 15px auto;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 1px solid #D6D6D6;
+  font: 12px "microsoft yahei", Arial, Helvetica, sans-serif;
+}
+.notice-top {
+  height:40px;
+  color: #666666;
+  font-size: 14px;
+  font-weight: 600;
+}
+.notice-box {
+  width: 100%;
+  border: 1px solid #D6D6D6;
+  margin-bottom: 15px;
+}
+.notice-box thead th {
+  height:40px;
+  background: #EFEFEF;
+  border-bottom: 1px solid #D6D6D6;
+}
+.notice-box tbody td {
+  height:45px;
+  border-bottom: 1px solid #D6D6D6;
+  text-align: center;
+  color: #666666;
+}
+.notice-box tbody td:first-child ,
+.notice-box thead th:first-child
+{
+  text-align: left;
+  padding-left: 40px;
+}
+.piece {
+  color: #666666;
+}
+.piece .piece-left {
+  display: inline-block;
+}
+.paginorange {
+  display: inline-block;
+}
+.piece .piece-number {
+  color: #0391F2;
+}
+
+/*公告文章*/
+.nav-top {
+  color: #666666;
+  margin-bottom: 15px;
+}
+.nav-top a {
+  color: #666666;
+}
+.essay-box {
+  width: 100%;
+  border:1px solid #D6D6D6;
+  padding: 35px;
+  box-sizing: border-box;
+}
+.essay-box .essay-title {
+  width: 100%;
+  height:50px;
+  text-align: center;
+  font-size: 18px;
+}
+.essay-box .essay-foot {
+  margin-top: 15px;
+  text-align: right;
+}
+.essay-box .essay-foot .foot-content {
+  display: inline-block;
+  text-align: center;
+}
+.essay-box .essay-foot .foot-content p{
+  line-height: 25px;
+}

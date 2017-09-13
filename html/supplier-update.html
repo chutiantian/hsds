@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content="author,email address"/>
+    <meta name="robots" content="index,follow"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <meta name="renderer" content="ie-stand"/>
+    <title>供应商修改</title>
+    <link rel="stylesheet" href="../css/less/common/reset.css"/>
+    <link rel="stylesheet" href="../css/less/common/mCustomScrollbar.min.css"/>
+    <link rel="stylesheet" href="../css/less/common/iconfont.css"/>
+    <link rel="stylesheet" href="../css/less/common/header.css"/>
+    <link rel="stylesheet" href="../css/less/common/page.css"/>
+    <link rel="stylesheet" href="../css/less/supplier.css"/>
+</head>
+<body>
+<!--引入头部-->
+<header class="header">
+    <div class="header-top">
+        <div class="header-top-child">
+            <div class="htc-left">您好，欢迎来到呼和浩特市采购电子交易平台,请
+                <button>登录</button>
+            </div>
+            <div class="htc-right">
+                <span class="hcr-order iconfont icon-dingdan">订单管理(5)</span>
+                <span class="hcr-sys iconfont icon-shezhi">系统设置</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-middle">
+        <div class="header-middle-box boxwidth">
+            <div class='hmb-logo'>
+                <img src="../img/logo.png" alt="logo"/>
+            </div>
+            <div class="hmb-search">
+                <input type="text" name="searchname" placeholder="输入品牌、商品名称..."/>
+                <button><img src="../img/search-btn.png"/></button>
+            </div>
+            <div class="hmb-cart">
+                <a href="buy.html" target="_blank">
+				<span class="hmb-cart-tips iconfont icon-qipao">
+					<i>66</i>
+				</span>
+                    <span class="hmb-cart-icon iconfont icon-gouwuche"></span>
+                    <span>我的购物车&nbsp;></span>
+                    <span class="redBall" style="display:none"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="nav" style="position: relative;">
+
+    <div class="nav-box boxwidth">
+        <div class="classify iconfont icon-type" style="position: relative;">
+            全部商品分类
+            <div class="catalog">
+
+                <div id="catalogs" style="overflow: hidden;background: #0c1431;height: 484px;">
+                    <script id="catalogs-template" type="text/x-handlebars-template">
+                        <!--	<div class="lbf-third-catalog mCustomScrollbar" id="third-catalog-name" >
+                                {{#each purchasecatalog}}
+                                    <div class="pardiv">
+                                       {{#each secondCatalog}}
+                                        <ul>
+                                      {{#each threeCatalog}}
+                                              <li><a href="product.html?catalogCode={{threeSystemCatalogCode}}&status=byPurchaseCatalog&cataname={{threePurchaseCatalogName}}"> {{threePurchaseCatalogName}}</a></li>
+                                          {{/each}}
+                                        </ul>
+
+                                   {{/each}}
+                                  </div>
+                                {{/each}}
+                            </div>-->
+                        <div class="lbf-child-catalog mCustomScrollbar" id="child-catalog-name">
+
+                            {{#each purchasecatalog}}
+                            <ul>
+                                {{#each secondCatalog}}
+                                <li><a class="hrefurl" href="javascript:;" onclick="getparm(this)"
+                                       data-posturl="product.html"
+                                       data-parm="{'status':'byPurchaseCatalog','cataname':'{{secondPurchaseCatalogName}}','catalogcode':'{{secondSystemCatalogCode}}'}">{{secondPurchaseCatalogName}}</a>
+                                </li>
+                                {{/each}}
+                            </ul>
+                            {{/each}}
+
+                        </div>
+                        <div class='left-bar'>
+                            <div class="left-bar-firstlist">
+                                <ul id="catalog-list">
+
+                                    {{#each purchasecatalog}}
+                                    <li class="icon{{handindex @index}}  catalog-li">
+                                        <i></i>
+                                        <span>{{purchaseCatalogName}}</span>
+
+                                    </li>
+                                    {{/each}}
+
+                                </ul>
+                            </div>
+                        </div>
+                    </script>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="nav-list">
+            <ul>
+                <li>
+                    <a href="./index.html">首页</a>
+                </li>
+                <li>
+                    <a href="./program.html">采购计划</a>
+                </li>
+                <li>
+                    <a href="./order.html">订单管理</a>
+                </li>
+                <li>
+                    <a href="./decision.html">决策支持</a>
+                </li>
+                <li>
+                    <a href="./notice.html">监管公告</a>
+                </li>
+                <li class="retailers">
+                    <a>中标电商</a>
+                    <ul>
+                        <li><a href="javascript:;" onclick="getparm(this)" data-posturl="product.html"
+                               data-parm="{'goodssource':'1','status':'byGoodsName','sourcename':'京东'}">京东</a></li>
+                        <li><a href="javascript:;" onclick="getparm(this)" data-posturl="product.html"
+                               data-parm="{'goodssource':'2','status':'byGoodsName','sourcename':'苏宁'}">苏宁</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 目录 -->
+
+
+</div>
+<div class="container" id="supplier-add-box">
+
+</div>
+
+<script id="supplier-list" type="text/x-handlebars-template">
+    <div class="supplier-add-head">
+        <a href="supplier.html">供应商管理</a>&nbsp;>&nbsp;修改
+    </div>
+    <form class="supplier-add-form" action="post" method="@{/suppliecontroller/update}" enctype="multipart/form-data">
+        <div class="form-group">
+            <label>供应商ID</label>
+            <span>{{id}}</span>
+        </div>
+        <div class="form-group">
+            <label for="shop-name">商家名称</label>
+            <input style="width: 70%" type="text" id="shop-name" value="{{name}}">
+        </div>
+        <div class="form-group shop-icon">
+            <label>商家图标</label>
+            <p class="pic-container">
+                <img src="../img/jd.png" />
+            </p>
+            <a href="javascript:;" class="file">浏览...
+                <input type="file" name="" id="browse">
+            </a>
+            <span class="hint">上传商家图标，尺寸60px*20px</span>
+        </div>
+        <div class="form-group">
+            <label class="link" for="link">商家商品链接前缀</label>
+            <input style="width: 70%" class="link" type="text" id="link" value="{{addressUrl}}">
+        </div>
+        <div class="form-group">
+            <label for="account-number">商家账号</label>
+            <input style="width: 40%" type="text" id="account-number">
+        </div>
+        <div class="form-group">
+            <label for="account-password">账号密码</label>
+            <input style="width: 40%" type="text" id="account-password">
+        </div>
+        <div class="form-group">
+            <label class="promise">服务承诺</label>
+            <p>{{addressUrl}}</p>
+            <input type="file" name="logoPath" id="file" style="border: 0;width: 26%;padding-left:0">
+            <span class="hint">上传商家图标，宽度1200px，高度不限，大小不超过200KB</span>
+        </div>
+        <div class="form-group btn-bottom">
+            <button class="btn-sure" type="submit">确定</button>
+            <button class="btn-cancel" type="reset">取消</button>
+        </div>
+    </form>
+</script>
+<div class="footer">
+    <p>
+        <a href="javascript:;">版权所有：内蒙古大数据&nbsp;&nbsp;&nbsp;技术支持：九次方大数据</a>
+    </p>
+    <p>
+        @copy right by JUSFOUN.com
+    </p>
+</div>
+<script>
+
+    var baseUrl = 'http://192.168.20.119:60030/';
+
+</script>
+<script src="../js/common/jquery.js"></script>
+<script src="../js/common/layer.js"></script>
+<script src="../js/common/jquery.lazyload.js"></script>
+<script src="../js/common/handlebars.min.js"></script> 
+<script src="../js/common/mCustomScrollbar.js"></script>
+<script src="../js/common/public.js"></script>
+<script src="../js/supplier-update.js"></script>
+</body>
+</html>

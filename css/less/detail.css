@@ -1,0 +1,378 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: 'Hiragino Sans GB', "microsoft yahei", "Helvetica Neue";
+}
+.detail-warp {
+  width: 1200px;
+  box-sizing: border-box;
+}
+.w450 {
+  width: 450px;
+}
+.w730 {
+  width: 730px;
+}
+.w157 {
+  width: 157px;
+}
+.w557 {
+  width: 571px;
+  text-align: left!important;
+  padding-left: 5px!important ;
+}
+.detail-bg-hui {
+  background-color: #f5f5f5;
+}
+.detail-title {
+  font: 700 16px Arial, "microsoft yahei";
+  color: #666;
+  padding-top: 10px;
+  line-height: 28px;
+  margin-bottom: 5px;
+}
+.detail-title-two {
+  height: 60px;
+  line-height: 60px;
+}
+.detail-pt20 {
+  padding-top: 20px;
+}
+.table-td {
+  display: table-cell;
+  height: 200px;
+}
+.detail-table-border {
+  border-left: 1px solid #dcdcdc;
+  border-top: 1px solid #dcdcdc;
+  border-right: 1px solid #dcdcdc;
+}
+.detail-table-border-button {
+  border-bottom: 1px solid #dcdcdc;
+}
+.detail-table-border-right {
+  border-top: 1px solid #dcdcdc;
+  border-right: 1px solid #dcdcdc;
+}
+.detail-table-border-button-right {
+  border-bottom: 1px solid #dcdcdc;
+}
+.detail-buy-btn {
+  display: inline-block;
+  height: 38px;
+  line-height: 38px;
+  padding: 0 18px;
+  background-color: #f98500;
+  color: #fff;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  opacity: .9;
+  filter: alpha(opacity=90);
+}
+.detail-buy-btn:hover {
+  opacity: .8;
+  filter: alpha(opacity=80);
+  color: #fff;
+}
+.w1043 {
+  width: 1043px;
+}
+.detail-mt20 {
+  margin-top: 20px;
+}
+.detail-w220 {
+  width: 220px;
+}
+.detail-h40 {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.li-style {
+  list-style: none;
+}
+.detail-inblock {
+  display: inline-block;
+  padding-left: 15px;
+}
+.detail-block {
+  display: block;
+}
+.detail-red {
+  color: red;
+}
+.detail-price {
+  color: red;
+  font: 700 24px Arial, "microsoft yahei";
+}
+.detail-del {
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+.detail-pr-20 {
+  padding-right: 20px;
+}
+.detail-w1200 {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.detail-mid {
+  display: table;
+  align: center;
+}
+.detail-w130 {
+  width: 130px;
+}
+.detail-tab-top {
+  cursor: pointer;
+  font: 600 14px Arial, "microsoft yahei";
+  text-align: center;
+  color: #919191;
+  line-height: 40px;
+}
+.detail-tap-warp {
+  border-bottom: 1px solid #008ff4;
+}
+.detail-tab-selected {
+  background-color: #008ff4;
+  color: #ffffff;
+}
+.detail-hide {
+  display: none;
+}
+.detail-mt30 {
+  margin-top: 30px;
+}
+.detail-img {
+  position: absolute;
+  height: 365px;
+}
+.detail-h365 {
+  height: 365px;
+}
+.detail-m20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.w1043 {
+  width: 1043px;
+}
+.breadcrumb {
+  height: 42px;
+  line-height: 42px;
+  width: 1200px;
+  margin: 0 auto;
+}
+.detail-comment .comment-warp {
+  width: 1200px;
+  margin: 0 auto;
+}
+.detail-comment .border-top {
+  border: 1px solid #cacbcb;
+  border-bottom: 0;
+}
+.detail-comment .border-bottom {
+  border-bottom: 1px solid #cacbcb;
+}
+.detail-comment .w157 {
+  width: 157px;
+}
+.detail-comment .w1045 {
+  width: 1045px;
+}
+.detail-comment li {
+  list-style: none;
+}
+.detail-comment .logo-warp {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.detail-comment .logo {
+  text-align: center;
+}
+.detail-comment .name {
+  text-align: center;
+}
+.detail-comment .content {
+  padding-right: 12px;
+  margin: 10px 0;
+}
+.detail-comment .star {
+  color: #fa8e00;
+}
+/* color */
+a:link,
+a:visited {
+  color: #575757;
+  text-decoration: none;
+}
+a:hover {
+  color: #ef4165;
+  text-decoration: none;
+}
+a:active {
+  color: #1d7400;
+}
+/* clearfix */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+*html .clearfix {
+  zoom: 1;
+}
+.smallImgUp,
+.smallImgDown {
+  height: 5px;
+  width: 70px;
+}
+.smallImgDown {
+  position: absolute;
+  bottom: 10px;
+  width: 70px;
+}
+.smallImgUp {
+  margin-bottom: 5px;
+}
+.scrollbutton img {
+  width: 100%;
+  height: 100%;
+  color: red;
+}
+#imageMenu {
+  height: 335px;
+  width: 70px;
+  overflow: hidden;
+  float: left;
+  position: relative ;
+  border: 1px solid #ccc;
+}
+#imageMenu ul {
+  position: absolute;
+}
+#imageMenu li {
+  height: 57px;
+  width: 59px;
+  padding: 5px;
+}
+#imageMenu li img {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+#imageMenu li:hover {
+  border: 1px solid #028ff3;
+  height: 55px;
+  width: 57px;
+}
+/* bigImg */
+.bigImg {
+  position: absolute;
+  top: 10px;
+  left: 70px;
+  float: left;
+  width: 335px;
+  height: 335px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-left: none;
+}
+.bigImg #midimg {
+  width: 100%;
+  height: 100%;
+}
+.bigImg #winSelector {
+  width: 180px;
+  height: 180px;
+}
+#winSelector {
+  position: absolute;
+  cursor: crosshair;
+  filter: alpha(opacity=15);
+  -moz-opacity: 0.15;
+  opacity: 0.15;
+  background-color: #000;
+  border: 1px solid #fff;
+}
+/* bigView */
+#bigView {
+  position: absolute;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  width: 335px!important;
+  height: 335px!important;
+  top: 10px!important;
+  left: 405px!important;
+  z-index: 999;
+}
+#bigView img {
+  position: absolute;
+}
+.goods-name {
+  font-family: 'Arial Negreta!', 'Arial Normal', 'Arial';
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+}
+.tdTitle {
+  background: #F5FAFE;
+  width: 100px;
+  text-align: center;
+  padding: 5px;
+}
+tr td {
+  padding-left: 5px!important;
+}
+.formwork_img {
+  text-align: center;
+}
+.formwork_bt_dz {
+  color: red;
+  font-weight: 700;
+  font-size: 14px;
+}
+.formwork_bt_dz img {
+  margin: 0 auto;
+}
+.formwork_titleleft {
+  font-size: 13px;
+  color: #ccc;
+}
+.formwork_text {
+  color: #ccc;
+}
+table {
+  margin: 0 auto;
+  border: 1px solid #ccc;
+}
+tr,
+td {
+  border: 1px solid #ccc;
+}
+.formwork_titleleft2 {
+  color: #ccc;
+}
+.ssd-module-wrap {
+  font-size: 16px ;
+}
+.formwork_bt_rb {
+  color: red;
+  font-size: 14px;
+}
+.formwork_titlecenter {
+  font-size: 14px;
+  color: #ccc;
+}
+.ssd-module {
+  text-align: center;
+}

@@ -1,0 +1,156 @@
+.paginorange {
+    margin-bottom: 5px;
+    float: right;
+    padding: 20px;
+    padding-right: 0px;
+}
+
+.paginorange > li {
+    display: inline
+}
+
+.paginorange > li > a {
+    float: left;
+    margin: 0 2.5px;
+    padding: 6px 12px;
+    line-height: 1.42857143;
+    border: 1px solid #dadada;
+    border-radius: 2px;
+    color: #666;
+    background-color: #fff;
+    text-decoration: none
+}
+
+.paginorange > li > a:focus, .paginorange > li > a:hover {
+    color: #fff;
+    background-color: #1a93ef;
+    border-color: #1a93ef
+}
+
+.paginorange > .active > a, .paginorange > .active > a:focus, .paginorange > .active > a:hover {
+    z-index: 2;
+    cursor: default;
+    color: #fff;
+    background-color: #1a93ef;
+    border-color: #1a93ef
+}
+
+.paginorange > .disabled > a, .paginorange > .disabled > a:focus, .paginorange > .disabled > a:hover {
+    cursor: default;
+    color: #a0a0a0;
+    background-color: #fff;
+    border-color: #dadada
+}
+
+.paginorange > li > a.pageleft, .paginorange > li > a.pageright {
+    position: relative;
+    border-color: transparent
+}
+
+.paginorange > li > a.pageleft:focus, .paginorange > li > a.pageleft:hover, .paginorange > li > a.pageright:focus, .paginorange > li > a.pageright:hover {
+    border-color: transparent;
+    background: 0 0
+}
+
+.paginorange > li > a.pageleft:after, .paginorange > li > a.pageleft:before, .paginorange > li > a.pageright:after, .paginorange > li > a.pageright:before {
+    content: '';
+    width: 0;
+    height: 0;
+    margin: auto;
+    border-style: solid;
+    border-width: 9px;
+    border-color: transparent #a0a0a0 transparent transparent;
+    position: absolute;
+    left: 0;
+    right: 12px;
+    top: 0;
+    bottom: 0
+}
+
+.paginorange > li > a.pageleft:hover:before {
+    border-right-color: #1a93ef
+}
+
+.paginorange > li.disabled > a.pageleft:hover:before {
+    border-right-color: #a0a0a0
+}
+
+.paginorange > li > a.pageleft:after {
+    border-right-color: #fff;
+    right: 6px
+}
+
+.paginorange > li > a.pageright:before {
+    border-color: transparent transparent transparent #a0a0a0;
+    left: 12px;
+    right: 0
+}
+
+.paginorange > li > a.pageright:hover:before {
+    border-left-color: #1a93ef
+}
+
+.paginorange > li.disabled > a.pageright:hover:before {
+    border-left-color: #a0a0a0
+}
+
+.paginorange > li > a.pageright:after {
+    border-color: transparent transparent transparent #fff;
+    right: 0;
+    left: 6px
+}
+
+.paginorange > .paginmsg {
+    display: inline-block;
+    vertical-align: top;
+    height: 34px;
+    margin-left: 3px;
+    line-height: 34px;
+    color: #a0a0a0
+}
+
+.paginorange > .paginmsg span {
+    margin: 0 3px;
+    color: #1A93EF;
+}
+
+.paginorange > .paginmsg input {
+    width: 3.5em;
+    height: 30px;
+    line-height: 20px \9;
+    margin: 0 5px;
+
+    vertical-align: top;
+    text-align: center;
+    border: 1px solid #dadada;
+    font-size: 14px;
+    color: #a0a0a0
+}
+
+.paginorange > .paginmsg input:focus {
+    border: 1px solid #1a93ef;
+    box-shadow: none;
+    outline-width: 0
+}
+
+.paginorange > .paginmsg button, .paginorange > .paginmsg button:focus {
+    height: 34px;
+    margin-left: 18px;
+    padding: .25em .95em;
+    border: 1px solid #dadada;
+    line-height: normal;
+    font-size: 12px;
+    color: #a0a0a0;
+    background: #fff;
+    box-shadow: none;
+    outline-width: 0
+}
+
+.paginorange > .paginmsg button:hover {
+    border-color: #1a93ef;
+    color: #1a93ef
+}
+
+.paginorange > .disabled > a.colordis {
+    color: #dadada
+}
