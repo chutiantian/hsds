@@ -44,7 +44,7 @@ $(function () {
             acctyear: year,
             purchaseState: '',
         }, opt)
-        getdata('/js/json/plan.json', options, 'get', function (data) {
+        getdata('../js/json/plan.json', options, 'get', function (data) {
             domData = data.data;
             render(data, '#plan-tpl', '.purchasing-con');
             orgpageInit('changeNo', '.paginorange', data.data.totalPage, currPage);
