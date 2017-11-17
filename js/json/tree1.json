@@ -1,0 +1,40 @@
+{
+    "msg": "调用成功",
+    "parentName": "计算机设备",
+    "code": "A02010104",
+    "name": "台式计算机",
+    "catalogprices": [
+        {
+            "id": "1",
+            "extra": null,
+            "creator": null,
+            "createDate": null,
+            "regenerator": null,
+            "updateDate": null,
+            "delFlag": 0,
+            "user": null,
+            "createUser": null,
+            "updateUser": null,
+            "syscatalogCode": "J001001",
+            "priceLevel": 1,
+            "upPrice": 22,
+            "downPrice": 33
+        },
+        {
+            "id": "2",
+            "extra": null,
+            "creator": null,
+            "createDate": null,
+            "regenerator": null,
+            "updateDate": null,
+            "delFlag": 0,
+            "user": null,
+            "createUser": null,
+            "updateUser": null,
+            "syscatalogCode": "J001001",
+            "priceLevel": 2,
+            "upPrice": 33,
+            "downPrice": 44
+        }
+    ]
+}

@@ -1,0 +1,92 @@
+{
+    "msg": "调用失败",
+    "code": "1",
+    "data": {
+        "success": [
+            {
+				"id":"b96452c3c1db40129e860a77df6c0d1a",
+				"orderNo":"59966582113",
+				"orderType":1,
+				"totalPrice":5000
+            }
+            ],
+        "failed": [
+            {
+                "flag": false,
+                "resultCode": null,
+                "info": "失败原因：com.suning.openesb.core.handler.impl.HttpServiceHandler$2:onComplete:com.suning.openesb.core.ESBException:HTTP SERVER ERROR:404,ERROR HTML:<H1>SRVE0255E: A WebGroup/Virtual Host to handle /gomst-web/OrderBaseMgmt/createGeepGovernmentOrders.htm has not been defined.</H1><BR><H3>SRVE0255E: A WebGroup/Virtual Host to handle web.cell2.group1.pre.gomst.cnsuning.com:9080 has not been defined.</H3><BR><I>IBM WebSphere Application Server</I>",
+                "orderId": null,
+                "programCode": "zfcg023",
+                "orderType": "2",
+                "childList": null,
+                "list": [
+                    {
+                        "resultMessage": null,
+                        "resultCode": "biz.govbus.addorder.invalid-biz:128",
+                        "goodId": "45a350cf9e1847afa4cb8fb29a4345c7",
+                        "goodName": "自营商品pre39",
+                        "additionInstruction": null,
+                        "goodPrice": "99.99"
+                    }
+                ]
+            },
+            {
+                "flag": false,
+                "resultCode": null,
+                "info": null,
+                "orderId": null,
+                "programCode": "zfcg025",
+                "orderType": "1",
+                "childList": null,
+                "list": [
+                    {
+                        "resultMessage": "商品名为:联想（Lenovo）扬天T4000c商用台式电脑整机（I3-6100 4G 128SSD 集成 WIN7 64位 四年上门服务）23英寸无货",
+                        "resultCode": null,
+                        "goodId": "000339021bf54a22ad47d75d8607abc8",
+                        "goodName": null,
+                        "additionInstruction": "无货",
+                        "goodPrice": "4399"
+                    }
+                ]
+            },
+            {
+                "flag": false,
+                "resultCode": null,
+                "info": "入参转化错误，请检查入参。异常信息：Failed to convert property value of type 'java.lang.String' to required type 'int' for property 'town'; nested exception is java.lang.NumberFormatException: For input string: \"\"",
+                "orderId": null,
+                "programCode": "zfcg024",
+                "orderType": "1",
+                "childList": null,
+                "list": [
+                    {
+                        "resultMessage": "提交失败",
+                        "resultCode": null,
+                        "goodId": "13d19763a6df4c8cba763499066842cf",
+                        "goodName": "联想（Lenovo）拯救者刃7000 UIY游戏台式电脑整机( i5-7400 8G 128SSD 1T GTX1060 Win10)23英寸",
+                        "additionInstruction": null,
+                        "goodPrice": "6499"
+                    }
+                ]
+            },
+            {
+                "flag": false,
+                "resultCode": null,
+                "info": "入参转化错误，请检查入参。异常信息：Failed to convert property value of type 'java.lang.String' to required type 'int' for property 'town'; nested exception is java.lang.NumberFormatException: For input string: \"\"",
+                "orderId": null,
+                "programCode": "zfcg025",
+                "orderType": "1",
+                "childList": null,
+                "list": [
+                    {
+                        "resultMessage": "提交失败",
+                        "resultCode": null,
+                        "goodId": "015fc45ad36e4d9b973a59e812aecf6a",
+                        "goodName": "联想（ThinkCentre）E74S 21.5英寸台式电脑（i5-6400T 4G 500G 集显 三年上门 Win10）10KT0012CD",
+                        "additionInstruction": null,
+                        "goodPrice": "4499"
+                    }
+                ]
+            }
+        ]
+    }
+}

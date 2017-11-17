@@ -1,0 +1,10 @@
+{
+    "msg": "调用成功",
+    "code": "1",
+    "ebOmDeliveraddress": [
+        {
+            "regionCode": "904",
+            "regionName": "南京市"
+        }
+    ]
+}

@@ -1,0 +1,1 @@
+function init(i){function n(i){filldom("notice-essay",i,"essay-box")}getdata("../js/json/notice-essay.json",i,"",n)}var id=GetQueryString("id"),opt={id:id};$(function(){init(opt)});

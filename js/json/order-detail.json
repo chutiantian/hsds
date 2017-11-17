@@ -1,0 +1,103 @@
+{
+  "msg":"调用成功",
+  "code":"1",
+  "data": {
+    "id": "1",
+    "extra": null,
+    "creator": null,
+    "createDate": null,
+    "regenerator": null,
+    "updateDate": null,
+    "delFlag": 0,
+    "user": null,
+    "createUser": null,
+    "updateUser": null,
+    "programItemId": null,
+    "orderNo": "1",
+    "orderStatus": 1,
+    "referDate": 7848832719,
+    "affirmDate": 6573893027,
+    "deliverDate": null,
+    "receiptDate": null,
+    "receiveAddress": "内蒙古自治区呼和浩特市内蒙古自治区呼和浩特市内蒙古自治区呼和浩特市",
+    "receiver": "宝宝",
+    "receiveTel": "13011111111",
+    "invoiceHeading": "大田集团",
+    "invoiceNo": "123",
+    "orderType": 1,
+    "payWay": 1,
+    "totalPrice": 140,
+    "orgId": null,
+    "creator2": null,
+    "createDate2": null,
+    "programCode": "12837492",
+    "orderTrackList": [
+      {
+        "trackTime": 1502178548000,
+        "trackContent": "您提交了订单，请等待系统确认",
+        "trackOperator": "客户"
+      },
+      {
+        "trackTime": 1502178548000,
+        "trackContent": "您提交了订单，请等待系统确认",
+        "trackOperator": "客户"
+      },{
+        "trackTime": 1502178548000,
+        "trackContent": "您提交了订单，请等待系统确认",
+        "trackOperator": "客户"
+      },{
+        "trackTime": 1502178548000,
+        "trackContent": "您提交了订单，请等待系统确认",
+        "trackOperator": "客户"
+      }
+    ],
+    "orderitemList": [
+      {
+        "id": "1",
+        "extra": null,
+        "creator": null,
+        "createDate": null,
+        "regenerator": null,
+        "updateDate": null,
+        "delFlag": 0,
+        "user": null,
+        "createUser": null,
+        "updateUser": null,
+        "orderId": null,
+        "goodsId": null,
+        "cartNum": 4,
+        "cartPrice": 10,
+        "cartSorce": null,
+        "goodsName": "达伯埃",
+        "goodsPicture": "../../img/goods-item1.png",
+        "programItemId": 1,
+        "purchaseHeadingId": 2,
+        "purchaseListCode": null,
+        "subtotal": 40
+      },
+      {
+        "id": "2",
+        "extra": null,
+        "creator": null,
+        "createDate": null,
+        "regenerator": null,
+        "updateDate": null,
+        "delFlag": 0,
+        "user": null,
+        "createUser": null,
+        "updateUser": null,
+        "orderId": null,
+        "goodsId": null,
+        "cartNum": 5,
+        "cartPrice": 20,
+        "cartSorce": null,
+        "goodsName": "达伯埃泰国原装进口高端复印纸A480g复印纸5包/箱",
+        "goodsPicture": "../../img/goods-item1.png",
+        "programItemId": 3,
+        "purchaseHeadingId": 4,
+        "purchaseListCode": null,
+        "subtotal": 100
+      }
+    ]
+  }
+}
