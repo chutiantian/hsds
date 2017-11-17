@@ -1,1 +1,0 @@
-function init(n){function t(t){filldom("notice-list",t,"notice-box"),orgpageInit("changeNo",".paginorange",t.page.totalPage,n.page)}getdata("../js/json/notice.json",n,"",t)}function changeNo(n){if(!/^[1-9]*[1-9][0-9]*$/.test(n))return layer.msg("页码只能是数字！"),!1;$(".pageIndex").val(n),opt.page=n,init(opt)}var opt={infoname:"",page:1,limit:20};$(function(){init(opt)});
